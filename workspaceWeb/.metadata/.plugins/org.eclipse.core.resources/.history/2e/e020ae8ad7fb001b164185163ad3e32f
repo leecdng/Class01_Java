@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/* 초기화 */
+
+ul, li{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	overflow:auto;
+}
+
+#main{
+	width:606px;
+	border:1px solid #ddd;
+	padding:10px;
+}
+
+#main>*{
+	float:left;
+}
+
+#main>ul:first-of-type{
+	width:400px;
+}
+
+#main>ul>li{
+	width:178px;
+	margin:10px;
+	border:1px solid #ddd;
+	float:left;
+}
+
+
+/* 토픽 */
+#main>div{
+	width:178px;
+	border:1px solid #ddd;
+	margin:10px;
+	float:left;
+}

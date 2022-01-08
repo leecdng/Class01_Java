@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+body{
+	margin:0;
+}
+
+ul, li{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.container{
+	width:800px;
+	margin: 0 auto;
+}
+
+#boardList > li{
+	float:left;
+	width:10%;
+	height:40px;
+	line-height:40px;
+	border-bottom:1px solid #ddd;
+}
+
+#boardList > li:nth-child(6n+1){
+	clear:both;
+}
+
+#boardList > li:nth-child(6n+3){
+	width:50%;
+	
+}
+
+.wordCut{
+	white-space:nowrap; /* 줄 안 바뀌게 */
+	overflow:hidden; /* 넘친 데이터 숨기기 */
+	/* 넘친 경우 ... 표시 하기*/
+	text-overflow:ellipsis;
+}
+</style>
+<script>
+	$(()=>{
+		$('#allChk').on('change',function(){
+			// 전체선택 적용하기
+			$('#boardList input[type=checkBox]').prop('checked', $('#allChk').prop('checked'));
+		});
+	});
+
+</script>
+</head>
+<body>
+<div class="container">
+	<input type="checkbox" id="allChk"/>전체선택
+	<ul id="boardList">
+		<li><input type="checkbox" name="chk" value="100"/>
+		<li>100</li>
+		<li class="wordCut">글제목 글제목 글제목 글제목 글제목 글제목 글제목 글제목 글제목 글제목 </li>
+		<li>이은정</li>
+		<li>등록일</li>
+		<li>조회수</li>
+		
+		<li><input type="checkbox" name="chk" value="99"/>
+		<li>99</li>
+		<li>글제목</li>
+		<li>이은정</li>
+		<li>등록일</li>
+		<li>조회수</li>
+		
+		<li><input type="checkbox" name="chk" value="98"/>
+		<li>98</li>
+		<li class="wordCut">글제목 글제목 글제목 글제목 글제목 글제목 글제목 글제목 글제목 글제목 </li>
+		<li>이은정</li>
+		<li>등록일</li>
+		<li>조회수</li>
+		
+		<li><input type="checkbox" name="chk" value="97"/>
+		<li>97</li>
+		<li>글제목</li>
+		<li>이은정</li>
+		<li>등록일</li>
+		<li>조회수</li>
+		
+		<li><input type="checkbox" name="chk" value="96"/>
+		<li>96</li>
+		<li>글제목</li>
+		<li>이은정</li>
+		<li>등록일</li>
+		<li>조회수</li>
+	</ul>
+</div>
+</body>
+</html>

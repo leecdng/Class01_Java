@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body{
+		margin:0;
+	}
+	
+	ul, li{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+
+	#header{
+		width:800px;
+		height:50px;
+		margin:0 auto;
+		background:yellow;
+	}
+	
+	#nav{
+		height:40px;
+		background:green;
+	}
+	
+	#nav > ul{
+		width:800px;
+		height:40px;
+		margin:0 auto;
+	}
+	
+	#nav li{
+		width:25%;
+		float:left;
+		line-height:40px;
+		text-align:center;
+		color:white;
+	}
+	
+	section{
+		width:800px;
+		margin:0 auto;
+		height:1500px;
+		position:relative;
+		background:#ddd;
+	}
+	
+	#leftBanner, #rightBanner{
+		width:100px;
+		height:200px;
+		background-color:pink;
+		position:absolute;
+	}
+	
+	#leftBanner{
+		top:0;
+		left:50%;
+		margin-left:-500px;
+	}
+	
+	#rightBanner{
+		top:0;
+		left:50%;
+		margin-left:400px;
+	}
+	
+	footer{
+		height:100px;
+		background-color:pink;
+	}
+
+</style>
+<script>
+	function bannerTopSetting(){
+		// 스크롤바의 top 좌표를 구하여 배너의 top좌표를 세팅
+		var scrollTop = window.scrollY; // 스크롤바의 위치
+		var bannerTop = scrollTop - 90; // 배너의 top 좌표
+		
+		console.log(scrollTop, bannerTop);
+		
+		if(scrollTop <= 90){
+			bannerTop = 0;
+		}
+		
+		document.getElementById("leftBanner").style.top = bannerTop + "px";
+		document.getElementById("rightBanner").style.top = bannerTop + "px";
+		
+	}
+</script>
+</head>
+<body onscroll="bannerTopSetting()">
+	<header id="header"></header>
+	<nav id="nav">
+		<ul>
+			<li>메뉴1</li>
+			<li>메뉴2</li>
+			<li>메뉴3</li>
+			<li>메뉴4</li>
+		</ul>
+	</nav>
+	<section id="section">
+		<img src="../img/wbb2.jpg" width="100%"/>
+		<div id="leftBanner"></div>
+		<div id="rightBanner"></div>
+	</section>
+	<footer>
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

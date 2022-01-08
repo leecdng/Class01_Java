@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// 연산자 : +,-,*,/,%,||,&&,!,>,<,>=,<=,+=,-=,*=, ++,--, ...
+	// if, if~else, while, for, do~while, break, continue, switch
+	
+	alert("페이지가 로딩됨");
+</script>
+</head>
+<body>
+
+</body>
+</html>

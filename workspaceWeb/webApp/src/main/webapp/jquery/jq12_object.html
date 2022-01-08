@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+	div{
+		border:1px solid red;
+		margin:5px;
+	}
+</style>
+<script>
+	$(function(){
+		// 객체 감싸기
+		// wrap() : 각각의 선택자를 각자 특정 태그로 감싼다.
+		$('.c1').wrap('<h1/>');
+		
+		// wrapAll() : 선택자를 특정 태그로 전체를 감싼다.
+		$('.c2').wrapAll('<div/>');
+		
+		// wrapInner() : 각각의 선택자의 하위를 특정태그로 감쌈
+		$('.c2').wrapInner('<b/>');
+		
+		// unwrap() : 선택자의 부모 객체를 삭제
+		$('.c2').unwrap();
+		
+		
+		// each() : 반복문
+		//			선택한 객체 (li, li..), 0,1,2,3, ...
+		$('#list>li').each(function(idx, obj){
+			// 각각의 li에 적용할 기능을 구현
+			console.log(obj, idx);
+			$(obj).html('<b>each를 이용한 반복처리-> ('+idx+')</b>');
+		});
+		
+		// map() : 배열을 이용한 반복문 처리
+		var data = ['달리기', '걷기', '수영','등산','싸이클'];
+		var tag = '<select>';
+		// 배열명.map()	달리기, 걷기.. , 0,1,2,3,...
+		data.map(function(value, idx){
+			tag += '<option value="'+value+'">'+value+'('+idx+')</option>';
+		});
+		
+		tag += '</select>';
+		
+		$('body').prepend(tag);
+	});
+</script>
+</head>
+<body>
+
+<div class="c1">객체 조작 메서드 1</div>
+<div class="c1">객체 조작 메서드 2</div>
+<div class="c2">객체 조작 메서드 3</div>
+<div class="c2">객체 조작 메서드 4</div>
+<ul id="list">
+	<li>객체 조작 메서드 AAA</li>
+	<li>객체 조작 메서드 BBB</li>
+	<li>객체 조작 메서드 CCC</li>
+	<li>객체 조작 메서드 DDD</li>
+	<li>객체 조작 메서드 EEE</li>
+	<li>객체 조작 메서드 FFF</li>
+	<li>객체 조작 메서드 GGG</li>
+</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+

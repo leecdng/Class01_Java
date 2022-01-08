@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script>
+
+	var n = 0;
+	var interval;
+	
+	function moveRight(){
+		clearTimeout(interval);
+		var movie = document.getElementById("movieImg");
+		
+		n--;
+		movie.style.left = n + 'px';
+		
+		interval = setTimeout("moveRight()", 5);
+		
+		if(n<=-820){
+			clearTimeout(interval);
+			moveLeft();
+		}
+	}
+	
+	function moveLeft(){
+		clearTimeout(interval);
+		var movie = document.getElementById("movieImg");
+		
+		n++;
+		movie.style.left = n + 'px';
+		
+		interval = setTimeout("moveLeft()", 5);
+		
+		if(n>=0){
+			clearTimeout(interval);
+			moveRight();
+		}
+	}
+	
+</script>
+</head>
+<body onload="moveRight()">
+	<div id="wrap">
+		<button class="leftBtn" onclick="moveLeft()">◀</button>
+		<div class="inner" onmouseover="clearTimeout(interval)" onmouseout="moveRight()">
+			<ul id="movieImg">
+				<li><img src="movie01.png"/></li>
+				<li><img src="movie02.png"/></li>
+				<li><img src="movie03.png"/></li>
+				<li><img src="movie04.png"/></li>
+				<li><img src="movie05.png"/></li>
+				<li><img src="movie06.png"/></li>
+				<li><img src="movie07.png"/></li>
+				<li><img src="movie08.png"/></li>
+				<li><img src="movie09.png"/></li>
+				<li><img src="movie10.png"/></li>
+				<li><img src="movie11.png"/></li>
+				<li><img src="movie12.png"/></li>
+				<li><img src="movie13.png"/></li>
+				<li><img src="movie14.png"/></li>
+				<li><img src="movie15.png"/></li>
+				<li><img src="movie16.png"/></li>
+				<li><img src="movie17.png"/></li>
+				<li><img src="movie18.png"/></li>
+				<li><img src="movie19.png"/></li>
+				<li><img src="movie20.png"/></li>
+			</ul>
+		</div>
+		<button class="rightBtn" onclick="moveRight()">▶</button>
+	</div>
+</body>
+</html>

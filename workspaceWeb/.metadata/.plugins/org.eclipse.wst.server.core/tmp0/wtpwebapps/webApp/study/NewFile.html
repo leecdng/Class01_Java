@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+   $(()=>{
+         //$('body').ready(function(){
+         //   
+            $('.one').animate({marginLeft:"100px",marginRight:"100px", opacity:0.3, fontSize:'8rem' },500)
+            .animate({marginLeft:"0px",marginRight:"0px" ,opacity:1, fontSize:'5rem'},500);
+            $('.two').animate({marginLeft:"100px",marginRight:"100px", opacity:0.3, fontSize:'8rem'},500)
+            .animate({marginLeft:"0px",marginRight:"0px" ,opacity:1, fontSize:'5rem'},500);
+            $('.three').animate({marginLeft:"100px",marginRight:"100px", opacity:0.3, fontSize:'8rem'},500)
+            .animate({marginLeft:"0px",marginRight:"0px" ,opacity:1, fontSize:'5rem'},500);
+         //});
+      });
+   
+</script>
+
+<style>
+	body, html{
+		height:100%;
+		margin:0;
+	}
+   
+   .center{
+      
+      width:800px;
+      height:300px;
+      display:flex;
+      align-items: center; /*div박스들 축중앙으로*/
+      justify-content: center;  /*위치한 자리에서 가운데정렬*/
+      background-color: pink;
+      margin:0 auto;
+      position:relative;
+      top:30%;
+      
+   
+      
+   }
+   
+   .one, .two, .three{
+      margin-left:100px;
+      margin-right:100px;
+      position:relative;
+      font-size:8rem;
+      
+      
+
+
+   }
+   
+</style>
+</head>
+<body>
+<div class="center">
+<div class="one">밤</div>
+<div class="two">하</div>
+<div class="three">늘</div>
+
+</div>
+
+
+</body>
+</html>

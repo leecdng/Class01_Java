@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	document.write("자바스크립트에서 쓰기");
+</script>
+</head>
+
+<body>
+
+<script>
+document.write("자바스크립트에서 쓰기");
+</script>
+
+글자 쓰기
+<script>
+document.write("자바스크립트에서 쓰기");
+</script>
+</body>
+</html>
+
+<script>
+document.write("자바스크립트에서 쓰기");
+</script>

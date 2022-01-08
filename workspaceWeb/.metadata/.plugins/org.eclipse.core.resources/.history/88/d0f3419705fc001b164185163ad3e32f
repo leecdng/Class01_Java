@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<ul>
+	<li id="first">첫 번째</li>
+	<li>두 번째</li>
+</ul>
+<img src="../img/wbb2.jpg"/ id="i1"/>
+</body>
+</html>

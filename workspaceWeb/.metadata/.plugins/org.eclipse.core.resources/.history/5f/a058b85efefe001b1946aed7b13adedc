@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function operation(){
+		var num1 = document.getElement("num1").value;
+		var num2 = document.getElement("num2").value;
+		var r1 = "";
+		var r2 = "";
+		var r3 = "";
+		var r4 = "";
+		
+		r1 = num1 + " + " + num2 + " = " + num1+num2;
+		document.getElement.("button").innerHTML =
+	}
+</script>
+</head>
+<body>
+	첫 번째 수 <input id="num1" type="text" value=""/><br/>
+	두 번째 수 <input id="num2" type="text" value=""/><br/>
+	<input id="btn" type="button" value="결과 보기"/><br/>
+	<div>
+		
+	</div>
+</body>
+</html>

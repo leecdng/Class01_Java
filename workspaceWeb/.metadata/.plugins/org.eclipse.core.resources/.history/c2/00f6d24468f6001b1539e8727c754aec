@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border='1' width='100%'>
+		<tr>
+			<td><video src='../sound_movie/sample_video.mp4' controls width='300'></video></td>
+			<td>
+			
+			
+			</td>
+		</tr>
+		<tr>
+			<td colspan='2'>
+				<img src='../img/img1.jfif' width='100%'>	
+			</td>
+		</tr>
+	
+	
+	</table>
+</body>
+</html>

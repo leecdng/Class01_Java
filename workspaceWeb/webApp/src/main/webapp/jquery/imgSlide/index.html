@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script src="jquery-ui.js"></script> -->
+<style>
+body{
+	margin:0;
+}
+
+ul, li, div, h1, a, img {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+ul, li{
+	list-style:none;
+}
+
+#wrap{
+	width:800px;
+	height: 600px;
+	margin: 20px auto 0;
+	overflow:hidden;
+}
+
+#title{
+	height:50px;
+	margin-bottom:10px;
+}
+
+
+
+/* 슬라이드 틀 */
+#slide{
+	height:550px;
+	position:relative;
+}
+
+
+
+/* 이미지들 */
+#img-slide{
+	width:4800px;
+	height:100%;
+	position:absolute;
+	top:0px; left:0;
+	z-index:50;
+}
+
+#img-slide > li{
+	width:800px;
+	height:100%;
+	float:left;
+	background-size:100%;
+	background-position:center;
+}
+
+
+/* 텍스트 */
+.slide-txt{
+	width:100%;
+	height:250px;
+	position:absolute;
+	top:150px; left:0;
+	z-index:200;
+}
+
+.slide-txt > li{
+	position:absolute;
+	top:0; left:0;
+	display:none;
+	z-index:200;
+	width:100%;
+	height:100%;
+	padding:0px 50px;
+	color: #fff;
+}
+
+.slide-txt > li:first-child{
+	display:block;
+}
+
+h3{
+	font-size:36px;
+	font-weight:bold;
+}
+
+.slide-txt > li >p:nth-child(2){
+	font-size:18px;
+}
+
+.slide-txt > li >p:nth-child(3){
+	font-size:14px;
+}
+
+
+
+/* 버튼 */
+.slide-btn{
+	position:absolute;
+	bottom:50px; left:50%;
+	height:15px;
+	margin-left:-135px;
+	z-index:150;
+}
+
+.slide-btn > a{
+	display:block;
+	width:15px;
+	height:15px;
+	float:left;
+	margin:0 15px;
+	background:url(point_button.png) no-repeat;
+	background-position: top;
+}
+
+
+/* 검정 반투명 배경 */
+.black{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0; left:0;
+	z-index:101;
+	background:#000;
+	opacity:0.5;
+}
+
+
+</style>
+<script>
+	$(function(){
+		
+		/* 이미지 기본 세팅 */
+		$('#img-slide>li').each(function(idx){
+			//$(this).attr('id', 'img0'+ (idx+1));
+			if(idx+1 < 10){ // 이미지 넘버가 10이하면 앞에 0 붙이기
+				$(this).css('background-image', 'url(0' + (idx+1) + '.jpg)');
+			} else{
+				$(this).css('background-image', 'url(' + (idx+1) + '.jpg)');	
+			}
+		});
+		
+		// 이미지(li) 개수 구하기
+		let cnt = $('#img-slide>li').length;
+		
+		
+		/* 버튼 기본 세팅 */
+		for(let i=1; i<=cnt; i++){
+			$('.slide-btn').append('<a href="#"></a>');
+			//$('.slide-btn').append('<a href="#img0' + i + '" onclick=""></a>');
+		}
+		
+		
+		/* 처음에 랜덤 이미지 띄우기 */
+		let imgIdx = parseInt(Math.random() * cnt); // 이미지(li) 개수만큼 난수 만들기
+		
+		$('#img-slide').css('left', -(imgIdx*800)); // 랜덤 이미지
+		$('.slide-txt>li').css('display', 'none'); // 모든 텍스트 지우고
+		$('.slide-txt>li').eq(imgIdx).css('display', 'block'); // 해당 텍스트만 띄우기
+		$('.slide-btn > a').eq(imgIdx).css('background-position', 'bottom'); // 해당 버튼 색 바꾸기
+		
+		
+		
+		/* 버튼 클릭 이벤트 */
+		$('.slide-btn > a').click(function(){
+			let idx = $(this).index(); // 눌린 버튼이 몇 번째 버튼인지 index 구하기
+			// 버튼 색 바꾸기
+			$('.slide-btn > a').css('background-position', 'top'); // 모든 버튼 색 기본으로 설정하고
+			$(this).css('background-position', 'bottom'); // 해당 버튼만 색 바꾸기
+			
+			// 이미지 슬라이드
+			$('#img-slide').animate({
+				left : -(idx*800)
+			}, 1000);
+			
+			// 내용 변경
+			$('.slide-txt>li').fadeOut(1000); // 모든 텍스트 지우고
+			$('.slide-txt>li').eq(idx).fadeIn(1000); // 해당 텍스트만 띄우기
+			
+			return false; // 링크 안 먹게
+		});
+	});
+	
+</script>
+</head>
+<body>
+<div id="wrap">
+	<h1 id="title">이미지 슬라이드</h1>
+	<div id="slide"> <!-- 슬라이드 틀 -->
+		<ul id="img-slide"> <!-- 이미지들 -->
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<ul class="slide-txt"> <!-- 텍스트 -->
+			<li>
+				<h3>첫 번째 이미지</h3>
+				<p>첫 번째 이미지에 대한 설명입니다.</p>
+				<p>우는 옷을 넣는 바이며, 우리 풀밭에 얼음이 별과 황금시대의 것이다. 이 만물은 기쁘며, 우리는 얼음 대한 되는 앞이 위하여 뿐이다. 목숨을 무엇을 인간에 가는 바로 작고 인생을 있는 것이다. 커다란 인간은 예가 얼마나 돋고, 이상의 날카로우나 보라.</p>
+			</li>
+			<li>
+				<h3>두 번째 이미지</h3>
+				<p>두 번째 이미지에 대한 설명입니다.</p>
+				<p>공자는 우리 싹이 앞이 쓸쓸하랴? 고행을 그들은 없는 이성은 인생을 구할 이것은 되려니와, 부패뿐이다. 놀이 같으며, 풀이 이것을 보이는 생생하며, 찾아 오직 보라. 피에 낙원을 것은 내려온 자신과 꽃이 피어나는 지혜는 힘차게 위하여서.</p>
+			</li>
+			<li>
+				<h3>세 번째 이미지</h3>
+				<p>세 번째 이미지에 대한 설명입니다.</p>
+				<p>그들은 가슴에 예수는 주며, 못할 방황하여도, 따뜻한 쓸쓸하랴? 인생을 그들은 시들어 못하다 만물은 거친 때문이다. 대고, 힘차게 못하다 이상 풍부하게 사라지지 튼튼하며, 사막이다. 이 착목한는 무엇을 그들을 설레는 불어 무엇을 구하지 사막이다.</p>
+			</li>
+			<li>
+				<h3>네 번째 이미지</h3>
+				<p>네 번째 이미지에 대한 설명입니다.</p>
+				<p>영락과 무엇을 쓸쓸한 위하여서. 꽃 황금시대의 그림자는 풍부하게 구할 황금시대다. 타오르고 목숨을 있는 때문이다. 이상 넣는 할지니, 것이다.</p>
+			</li>
+			<li>
+				<h3>다섯 번째 이미지</h3>
+				<p>다섯 번째 이미지에 대한 설명입니다.</p>
+				<p>원질이 그들은 방황하였으며, 이것을 꽃이 앞이 이것이다. 같이, 풍부하게 심장의 가지에 피가 이상, 보는 내는 고동을 아름다우냐? 무엇이 스며들어 그들의 물방아 영락과 바이며, 붙잡아 행복스럽고 생명을 쓸쓸하랴?</p>
+			</li>
+			<li>
+				<h3>여섯 번째 이미지</h3>
+				<p>여섯 번째 이미지에 대한 설명입니다.</p>
+				<p>얼음에 것은 때에, 그들의 못할 인간은 하였으며, 보이는 사막이다. 웅대한 인도하겠다는 청춘 따뜻한 할지니, 관현악이며, 커다란 아니다. 장식하는 현저하게 두기 위하여서 어디 주는 구할 그들은 그들의 황금시대다. 그들의 것은 대고, 꾸며 노년에게서 천지는 더운지라 같지 것이다.</p>
+			</li>
+		</ul>
+		<ul class="slide-btn"> <!-- 버튼 -->
+		
+		</ul>
+		<div class="black"></div> <!-- 검정 반투명 배경 -->
+	</div>
+</div>
+</body>
+</html>

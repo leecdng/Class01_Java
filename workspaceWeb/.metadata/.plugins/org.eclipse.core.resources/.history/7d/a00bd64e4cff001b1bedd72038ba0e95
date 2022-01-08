@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+body{
+	margin:0;
+	background-color:#eee;
+}
+
+
+#wrap{
+	width:700px;
+	margin:0 auto;
+	background-color:#fff;
+}
+
+
+/* header */
+
+#header{
+	width:100%;
+	height:180px;
+}
+
+#logo{
+	width:142px;
+	height:58px;
+	margin:0 auto;
+	padding-top:80px;
+}
+
+#logo > a {
+	display:block;
+	width:100%;
+	height:58px;
+	background:url(logo_daum.png) no-repeat;
+	background-size:100%;
+	text-align:right;
+}
+
+
+
+/* container */
+
+#container{
+	width:100%;
+	height:500px;
+}
+
+#contents{
+	width:420px;
+	margin:0 auto;
+}
+
+#sns_login{
+	display:block;
+	width:200px;
+	height:30px;
+	float:right;
+}
+
+#contents form{
+	clear:both;
+	width:100%;
+}
+
+form > #id, form > #pw{
+	width:100%;
+	height:48px;
+	margin-bottom:10px;
+	padding:0 14px;
+	box-sizing:border-box;
+	border:1px solid #ddd;
+	font-size:15px;
+	color:#aaa;
+}
+
+#loginBtn{
+	width:100%;
+	height:56px;
+	border:none;
+	background-color:#4c87ee;
+	font-size:18px;
+	font-weight:bold;
+	color:#fff;
+}
+
+
+
+
+
+
+

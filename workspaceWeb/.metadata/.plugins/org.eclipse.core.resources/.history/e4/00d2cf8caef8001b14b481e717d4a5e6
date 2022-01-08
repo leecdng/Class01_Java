@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+
+h1, li{
+	color:red;
+}
+
+a:link{
+	text-decoration:none;
+	color:#333;
+}
+
+a:visited{
+	text-decoration:none;
+	color:#333;
+}
+
+a:hover{
+	text-decoration:none;
+	color:#ccc;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>A태그</title>
+</head>
+<body>
+<pre>
+   h1태그는 heading의 약자로 글의 제목으로 강조하고 싶을 때 사용한다.
+   진하게, 글자크기 설정, 숫자가 클수록 작은 크기의 글자 
+   h1,h2,h3,h4,h5,h6까지 존재한다. 
+   _blank : 새로운 창에 페이지 열기 (네이버가 새로운 창에 열림) (속성기능이라고 한다_blank.title 등등 여기엔 ""써야한다 )
+</pre>
+<h1 title="문자에 링크걸기~~~">문자에 링크걸기</h1>
+<a href="../index.html">홈페이지</a>
+<a href="/webApp2/index.html">홈페이지</a>
+<a href="https://www.naver.com/"target="_blank" title="풍선도움말~~~~">네이버</a>
+<a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=104&oid=016&aid=0001870823">뉴스기사</a>
+
+
+<h2>이미지에 링크걸기</h2>
+<a href="https://www.nate.com/"><img src="/webApp2/img/cat.jpg" width="100"/></a>
+
+<h3>같은페이지의 특정위치로 링크걸기</h3>
+
+<h6>map을 이용한 링크걸기</h6>
+</body>
+</html>

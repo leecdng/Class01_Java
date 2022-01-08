@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<pre>h1태그는 heading의 약자로 글의 제목을 강조하고 싶을 때 사용
+	진하게, 글자크기 설정, 숫자가 클수록 작은 크기의 글자
+	h1~h6까지 존재
+</pre>
+<h1>문자에 링크걸기</h1>
+<a href="../index.html">홈페이지</a>
+<a href="/webApp/index.html">홈페이지</a>
+<h2>이미지에 링크걸기</h2>
+<h3>같은 페이지의 특정위치로 링크 걸기</h3>
+<h4>map을 이용한 링크걸기</h4>
+</body>
+</html>

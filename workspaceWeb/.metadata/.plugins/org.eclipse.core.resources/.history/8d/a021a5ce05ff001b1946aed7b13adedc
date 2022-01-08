@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+	var a = "5";
+	var b = "6a";
+	var c = 5;
+	
+	document.write(isNaN(a)+", "); // false
+	document.write(isNaN(b)+", "); // true 
+	document.write(isNaN(c)+"<br/>"); // false 
+	
+	document.write(a + c + "<br/>");
+	
+	
+
+	function calcu(){
+		var n1Obj = document.getElementById("num1");
+		var n2Obj = document.getElementById("num2");
+		var n1 = n1Obj.value;
+		//document.getElementById("num1").value = 125;
+		var n2 = n2Obj.value;
+		
+		if(!isNaN(n1) && !isNaN(n2)){
+			var plus = n1 + n2;
+			var minus = n1 - n2;
+			var mul = n1 * n2;
+			var div = n1 / n2;
+			
+			var r = n1+"+"+n2+"="+plus+"<br/>";
+			r += n1+"-"+n2+"="+minus+"<br/>";
+			r += n1+"*"+n2+"="+mul+"<br/>";
+			r += n1+"/"+n2+"="+div+"<br/>";
+			
+			document.getElementById("result").innerHTML = r;
+			
+			// 초기화 --------------- 왜 n1, n2로 안 해준 걸까???????????
+			n1Obj.value="";
+			n2Obj.value=""; 
+		} else{
+			document.getElementById("result").innerHTML = "값을 잘못 입력하였습니다.";
+		}
+		
+	}
+</script>
+</head>
+<body>
+	첫 번째 수 <input id="num1" type="text"/><br/>
+	두 번째 수 <input id="num2" type="text"/><br/>
+	<input id="btn" type="button" value="결과 보기" onclick="calcu()"/><br/>
+	<div id="result">
+		
+	</div>
+</body>
+</html>

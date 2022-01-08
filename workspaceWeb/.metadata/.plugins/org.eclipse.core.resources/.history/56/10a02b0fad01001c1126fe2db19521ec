@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body{
+		margin:0;
+	}
+	
+	ul, li{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+
+	#header{
+		width:800px;
+		height:50px;
+		margin:0 auto;
+		background:yellow;
+	}
+	
+	#nav{
+		height:40px;
+		background:green;
+	}
+	
+	#nav > ul{
+		width:800px;
+		height:40px;
+		margin:0 auto;
+	}
+	
+	#nav li{
+		width:25%;
+		float:left;
+		line-height:40px;
+		text-align:center;
+		color:white;
+	}
+	
+	section{
+		width:800px;
+		margin:0 auto;
+		height:1500px;
+		position:relative;
+		background:#ddd;
+	}
+	
+	#leftBanner, #rightBanner{
+		width:100px;
+		height:200px;
+		background-color:pink;
+		position:absolute;
+	}
+	
+	#leftBanner{
+		top:50px;
+		left:50%;
+		margin-left:-500px;
+	}
+	
+	#rightBanner{
+		top:50px;
+		left:50%;
+		margin-left:400px;
+	}
+	
+	footer{
+		height:100px;
+		background-color:pink;
+	}
+
+</style>
+<script>
+	function bannerXY(){
+		var bannerL = document.getElementById("leftBanner");
+		var bannerR = document.getElementById("rightBanner");
+		
+		var headerH = 90; 
+			//parseInt(document.getElementById("header").style.height) + parseInt(document.getElementById("nav").style.height);
+		var topL = headerH + 50//parseInt(bannerL.style.top);
+		var topR = headerH + 50//parseInt(bannerR.style.top);
+		
+		var topW = window.scrollY;
+		
+		console.log(topW, document.getElementById("header"));
+		
+		if(topW >= topL){
+			bannerL.style.top = topW - headerH + "px";
+		} else if(topW <= 0){
+			bannerL.style.top = 50 +"px";
+		}
+		
+		if(topW >= topR){
+			bannerR.style.top = topW - headerH + "px";
+		} else if(topW <= 0){
+			bannerR.style.top = 50 +"px";
+		}
+		
+	}
+</script>
+</head>
+<body onscroll="bannerXY()">
+	<header id="header"></header>
+	<nav id="nav">
+		<ul>
+			<li>메뉴1</li>
+			<li>메뉴2</li>
+			<li>메뉴3</li>
+			<li>메뉴4</li>
+		</ul>
+	</nav>
+	<section id="section">
+		<div id="leftBanner"></div>
+		<div id="rightBanner"></div>
+	</section>
+	<footer>
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

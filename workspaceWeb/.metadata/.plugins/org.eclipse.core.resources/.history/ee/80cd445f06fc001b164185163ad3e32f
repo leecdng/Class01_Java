@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<ul>
+	<li id="first">첫 번째</li>
+	<li>두 번째</li>
+</ul>
+<img src="../img/wbb2.jpg"/ id="i1"/>
+
+<script> // html 안에 있는 코드가 생성되고 난 다음에
+	// 자바스크립트에서 스타일시트 적용하기
+	// 자바스크립트 입장에서는 body내용은 document에 있는 것
+	
+	// background, background-color, background-image, ...
+	// font-size -> fontSize
+	
+	document.getElementById("first").style.backgroundColor="lightblue";
+	document.getElementById("l1").style.border="3px solid red";
+	
+</script>
+</body>
+</html>

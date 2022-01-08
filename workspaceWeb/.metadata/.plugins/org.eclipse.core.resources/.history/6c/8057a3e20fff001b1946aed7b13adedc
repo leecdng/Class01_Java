@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	// Array를 이용한 배열 생성
+	
+	// 배열 생성
+	// 데이터 타입이 달라도 같은 배열에 담을 수 있음
+	var arr = new Array();
+	
+	arr[2] = 100;
+	arr[5] = "홍길동";
+	
+	arr[2] = "String"; // 데이터타입 상관 없이 변경 가능
+	
+	for(i=0; i<arr.length; i++){
+		document.write("arr[" + i + "]" + arr[i]+"<br/>");
+		
+	}
+	
+	
+	// 배열 생성과 동시에 초기값 줄 수 있음
+	var arr2 = new Array("초기값", 200, "서울시 마포구", 14.5);
+	
+	arr2[10] = 1234;
+	document.write("<ol>");
+	for(var i=0; i<arr2.length; i++){
+		document.write("<li>" + arr2[i] + "</li>");
+	}	
+	document.write("</ol>");
+	
+	
+</script>
+</body>
+</html>

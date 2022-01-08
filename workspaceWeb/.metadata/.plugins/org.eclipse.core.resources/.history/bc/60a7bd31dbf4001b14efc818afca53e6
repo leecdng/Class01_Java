@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<pre>h1태그는 heading 태그</pre>
+<h1>문자에 링크걸기</h1>
+<h1>이미지에 링크걸기</h1>
+<h1>같은 페이지의 특정위치로 링크 걸기</h1>
+<h1>map을 이용한 링크걸기</h1>
+</body>
+</html>

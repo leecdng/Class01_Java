@@ -1,0 +1,13 @@
+
+public class InsertProcedure {
+
+	public InsertProcedure() {
+		
+	}
+	
+	public static void main(String[] args) {
+		new InsertProcedure();
+
+	}
+
+}

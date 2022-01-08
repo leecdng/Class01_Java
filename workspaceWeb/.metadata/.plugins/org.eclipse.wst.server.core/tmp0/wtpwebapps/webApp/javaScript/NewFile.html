@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+   #d1{height:200px; background-color:pink;padding:50px;}
+   #d1>div{height:100px;background-color:lightblue;padding:50px;}
+   #d1 h1{background-color:orange;}
+</style>
+<script>
+/*
+ *       onmouseover, onmouseout: 이벤트 객체 내부의 각 태그마다 이벤트가 발생한다.
+       
+       onmouseenter : over
+       onmouseleave : out 이벤트 객체 내부의 각 태그는 이벤트가 발생하지 않는다. 
+       
+       onmousedown  : 마우스를 누르면 
+       onmouseup
+       onmousemove
+       
+       onfocus : 객체에 커서가 들어가면 (들어올 때)
+       onblur : 객체에서 커서가 나가면 (나갈 때)
+       
+       onsubmit :
+       onreset : 
+          
+       onkeydown: 누른상태
+       onkeypress: 누른상태
+       onkeyup:누른후 놓을때
+       
+       onchange : value의 값이 변경되면 발생한다.
+       
+       
+ */
+ 
+   var cnt=0;
+   function mouseOverTest(){
+      document.getElementById("view").innerHTML="<h1>"+ ++cnt +"</h1>";
+   }
+   var count=0;
+   function mouseOutTest(){
+      document.getElementById("view2").innerHTML ="<h1>"+ ++count + "</h1>";
+   }
+   function cursorTest(id){ //어떨대는 userid. 어떨때는 username 들어온다. 
+      id.style.fontSize ="3em";
+      id.style.backgroundColor="#ddd";
+   }
+   function cursorTest2(blur){
+      blur.style.fontSize ="1em";
+      
+   }
+   
+   function formCheck(){
+      if(document.frm.userid.value==""){
+         alert("아이디를 입력하세요..");
+         return false;
+      }
+      if(document.getElementById("username").value==""){
+         alert("비밀번호를 입력하세요..");
+         return false;//함수 실행을 종료시킨다.
+      }
+      //javascript 에서 submit이 발생시키도록 해줘야 한다.
+      document.getElementById("frm").submit();
+      //document.frm.submit();
+   
+   }
+   
+   
+   //userid에는 영문자만 입력되도록 설정(방금눌러진 key 코드를 구하면 된다.) 
+   function keyCheck(){
+      //방금 입력된 key의 코드를 구하면
+      var key= event.keyCode;
+      if(! (key>=65&& key<=90)||( key>=97 && key<=122)){ //영문자 && , || 
+         //영문자 외의 문자가 입력됐을때 입력값을 취소
+         event.returnValue=false; //true해주면 보임
+      }
+   }
+   
+   function dataChange(){
+      console.log("데이터 바뀜...");
+   }
+
+</script>
+</head>
+<body>
+
+<div>
+<form name="frm" id="frm" method="get" action="test.jsp">
+   <input type="text" name="userid" id="userid" onfocus="cursorTest(this)" onblur="cursorTest2(this)" onkeydown="keyCheck()"/><br/>
+   <input type="text" name="username" id="username" onfocus="cursorTest(this)" onblur="cursorTest2(this)" 
+   onchange="dataChange()"/><br/>
+   
+   <input type="button" value="왜적용이안돼!!!button" onclick="formCheck()"/><br/>
+
+   <input type="submit"/><br/> 
+   <input type="image" src="../img/dog2.jpg"/>
+   <button>등록</button>
+
+   
+   
+</form>   
+</div>
+ <!--  <div id="d1" onmouseover="mouseOverTest()" onmouseout="mouseOutTest()"> -->
+ <div id="d1" onmouseenter="mouseOverTest()" onmouseleave="mouseOutTest()" onmousedown="this.style.backgroundColor='yellow'">
+   <div>
+      <h1> Mouserover, Mouseoutㅇㄹㄴㅇㄹㄴㄹㄴㅇㄹ테스트</h1>
+   </div>
+</div>
+<div id="view"></div>
+<div id="view2"></div>
+</body>
+</html>

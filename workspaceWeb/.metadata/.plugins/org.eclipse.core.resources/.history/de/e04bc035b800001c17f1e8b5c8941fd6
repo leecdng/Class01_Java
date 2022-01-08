@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#d1{
+		height:200px;
+		background-color:pink;
+		padding:50px;
+	}
+	
+	#d1>div{
+		height:100px;
+		background-color:lightblue;
+		padding:50px;
+	}
+	
+	#d1 h1{
+		background-color:orange;
+	}
+</style>
+</head>
+<body>
+<div id="d1">
+	<div>
+		<h1>Mouseover, Mouseout 테스트</h1>
+	</div>
+</div>
+<div id="view"></div>
+
+</body>
+</html>

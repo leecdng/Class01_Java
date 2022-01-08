@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#pink{
+		width:100%;
+		height:50px;
+	}
+	
+	#blue{
+		width:100%
+		height:20px;
+	}
+
+</style>
+</head>
+<body>
+	<div id="pink"></div>
+	<div id="blue"></div>
+</body>
+</html>

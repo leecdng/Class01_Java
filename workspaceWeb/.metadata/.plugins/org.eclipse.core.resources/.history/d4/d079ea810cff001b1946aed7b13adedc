@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	// 수학 함수
+	var n = 123.568;
+	
+	document.write("PI -> " + Math.PI);
+	document.write("<br/>pow -> " + Math.pow(3,4)); // 3의 4승
+	
+	document.write("<br/>round -> "+ Math.round(n));
+	document.write('<br/>sqrt ->' + Math.sqrt(10));
+	
+	
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

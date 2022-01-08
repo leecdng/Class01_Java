@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/*
+		background-color: 배경색
+		background-image: 배경을 이미지로 채운다.
+		background-repeat: 배경이미지 반복 여부 (repeat-x, repeat-y, no-repeat)
+		background-attachment: 배경이미지 고정 설정 가능. 생략하면 scroll
+	*/
+	
+	body{
+		background-image:url(../img/wbb2.jpg);
+		background-repeat:no-repeat;
+		background-position:30% 80%;
+		background-attachment:fixed;
+	}
+
+</style>
+</head>
+<body>
+	<h1>background 속성</h1>
+	<pre>
+		배경색
+		배경이미지
+	</pre>
+</body>
+</html>

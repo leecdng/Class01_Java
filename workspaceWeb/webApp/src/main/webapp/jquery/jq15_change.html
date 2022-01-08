@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+	div{
+		/*font-size:1in; */
+	}
+</style>
+
+<script>
+	$(function(){
+		/* 글자색 바꾸기 */
+		
+		// 컬러명
+		var rgb = ['rgb(255,0,0)', '#00f', 'yellow', '#888', 'pink', 'orange'];
+		// 컬러 코드
+		var colorName = ['빨강', '파랑', '노랑', '회색', '분홍', '주황'];
+		
+		var tag = '<select>';
+		//					값, index
+		colorName.map(function(v, idx){
+			tag += '<option value="'+ rgb[idx] + '">' + v + '</option>';
+		});
+		tag += '</select>';
+		
+		$('body').prepend(tag);
+		
+		// ------------------  이벤트 처리
+		$('select').change(function(){
+			$('div').css('color', $('select').val());	// $(this).val();
+		});
+		
+		/* 글자 크기 바꾸기 */
+		$('input[type=button]').on('click', function(){
+			// 이벤트가 발생한 버튼 index를 구한다.
+			var idx = $('input[type=button]').index(this);
+			console.log(idx);
+			
+			var nowSize = parseInt($('div').css('font-size')); // px로 나옴, em 등 다른 단위로 설정해도 px로 나옴
+			console.log(nowSize);
+			if(idx==0){
+				$('div').css('font-size', nowSize-1); // px 안 붙여도 잘 나옴
+			} else if(idx==1){
+				$('div').css('font-size', '16px');
+			} else if(idx==2){
+				$('div').css('font-size', nowSize+1);
+			}
+		});
+		
+		
+		
+	});
+</script>
+</head>
+<body>
+<input type="button" value=" - "/>
+<input type="button" value=" 0 "/>
+<input type="button" value=" + "/>
+<div>
+BBQ가 2020 도쿄 올림픽에서 45년 만의 메달 결정전 도전으로 여자배구 4강 신화를 이뤄낸 
+주역인 김연경 선수를 모델로 선정했다고 23일 밝혔다.
+
+이번에 체결한 광고 모델 계약에 따라 김연경 선수는 9월부터 6개월 동안 
+'제너시스BBQ 모델로 TVCF를 비롯한 지면, 라디오, 소셜 네트워크 서비스(SNS), 
+굿즈 등 다양한 마케팅 활동을 통해 브랜드 이미지 제고에 적극 나설 예정이다.
+
+BBQ 관계자는 "늘 열정 넘치는 모습으로 위기도 기회로 만들어내며 국민들에게 감동과 
+즐거움을 선사하는 김연경 선수의 에너지가 BBQ에서 추구하는 이미지와 부합한다"며 
+"김연경 선수와 건강하고 맛있는 치킨으로 폭넓은 사랑을 받는 BBQ의 만남이 많은 관심을 
+받을 것으로 기대한다"고 모델 발탁 배경을 설명했다.
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

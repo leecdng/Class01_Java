@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+body{
+	margin:0;
+	background-color:#9c6;
+}
+
+ul, ol{
+	list-style:none;
+}
+
+ul, ol, li{
+	margin:0;
+	padding:0;
+}
+
+/* wrap */
+#wrap{
+	width:1060px;
+	margin:10px auto 0;
+	background-color:#fff;
+}
+
+
+
+/* header */
+#header{
+	height:511px;
+	
+}
+
+
+#bg1 li, #bg2 li{
+	width:167px;
+}
+
+
+#bg1{
+	margin-left:165px;
+}
+
+#bg1 li{
+	height:334px;
+	float:left;
+}
+
+#bg1 li:nth-of-type(1){
+	background:url(css_gaon_02.jpg);
+}
+
+#bg1 li:nth-of-type(2){
+	background:url(css_gaon_03.jpg);
+}
+
+#bg1 li:nth-of-type(3){
+	background:url(css_gaon_04.jpg);
+}
+
+#bg1 li:nth-of-type(4){
+	background:url(css_gaon_05.jpg);
+}
+
+#bg1 li:nth-of-type(5){
+	background:url(css_gaon_06.jpg) right center;
+}
+
+#gnb{
+	
+}
+
+#gnb li{
+	width:167px;
+	height:72px;
+	float:left;
+	background-color:#63bb27;
+	color:#fff;
+	text-align:center;
+	font-size:20px;
+	font-weight:bold;
+	line-height:72px;
+}
+
+#gnb li:first-of-type {
+	width:165px;
+}
+
+#bg2{
+	margin-left:165px;
+}
+
+#bg2 li{
+	height:105px;
+	float:left;
+}
+
+#bg2 li:nth-of-type(1){
+	background:url(css_gaon_15.jpg);
+}
+
+#bg2 li:nth-of-type(2){
+	background:url(css_gaon_16.jpg);
+}
+
+#bg2 li:nth-of-type(3){
+	background:url(css_gaon_17.jpg);
+}
+
+#bg2 li:nth-of-type(4){
+	background:url(css_gaon_18.jpg);
+}
+
+#bg2 li:nth-of-type(5){
+	background:url(css_gaon_19.jpg) right center;
+}
+
+
+
+/* container */
+#container{
+	width:835px;
+	height:240px;
+	margin-left:165px;
+	clear:both;
+}
+
+
+#new{
+	width:375px;
+	float:left;
+}
+
+#new ol li{
+	height:34px;
+	margin-top:15px;
+	padding-left:7px;
+	line-height:34px;
+	border:2px solid #999;
+}
+
+#new ol li span{
+	font-weight:bold;
+}
+
+
+
+#gallery{
+	width:376px;
+	float:right;
+}
+
+
+#gallery ul li{
+	float:left;
+	margin:15px 0  0 11px;
+}
+
+#gallery ul li:nth-of-type(4n+1){
+	clear:both;
+}
+
+#gallery ul li p{
+	margin:0;
+}
+
+#gallery ul li p:first-of-type{
+	height:60px;
+}
+
+#gallery ul li img{
+	width:80px;
+}
+
+#gallery ul li p:nth-of-type(2){
+	padding-top:5px;
+	text-align:center;
+	font-size:12px;
+	color:#666;
+}
+
+
+
+/* footer */
+
+#footer{
+	width:835px;
+	height:155px;
+	margin-left:165px;
+	background:url(css_gaon_31.jpg);
+	clear:both;
+}
+
+#footer>div{
+	padding-top:21px;
+}
+
+#footer > div > img{
+	height:77px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

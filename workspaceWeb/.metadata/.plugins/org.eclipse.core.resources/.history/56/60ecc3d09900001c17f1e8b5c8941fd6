@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#postView{
+		width:880px;
+		height:114px;
+		margin:0 auto;
+	}
+</style>
+</head>
+<body>
+	<div id="postView"></div>
+</body>
+</html>

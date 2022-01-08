@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+
+	innerfade api
+	https://gist.github.com/coolniikou/665255
+
+ -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="jquery.innerfade.js"></script>
+<style>
+	ul, li{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	
+	div:first-child{
+		height:450px;
+	}
+	
+	#innerImg img{
+		width:600px;
+		height:450px;
+	}
+	
+	div:nth-child(2){
+		width:600px;
+		height:300px;
+		background-color:#ddd;
+		z-index:1000;
+	}
+</style>
+
+<script>
+	$(function(){
+		// 이미지에 innerfade 적용하기
+		$('#innerImg').innerfade({
+			animationtype : 'slide',// 'slide', 'fade'(기본)
+			speed : 1000, //'fast ', 'slow', 'fast', 'normal', 밀리초
+			timeout : 1000,
+			type: 'random_start'//'random', 'sequence(기본)', 'random_start'
+		});
+		
+		$('#innerTxt').innerfade({
+			animationtype : 'slide',
+			speed : 1000,
+			timeout : 1000,
+			type: 'random'
+		});
+	});
+</script>
+</head>
+<body>
+<!--  이미지를 이용한 innerfade  -->
+<div>
+	<ul id="innerImg">
+		<li><a href="https://www.naver.com"><img src="../../img/wbb2.jpg"/></a></li>
+		<li><a href="https://www.naver.com"><img src="../../img/wbb.jpg"/></a></li>
+		<li><a href="https://www.naver.com"><img src="../../img/wbb2.jpg"/></a></li>
+		<li><a href="https://www.naver.com"><img src="../../img/wbb.jpg"/></a></li>
+		<li><a href="https://www.naver.com"><img src="../../img/wbb2.jpg"/></a></li>
+		<li><a href="https://www.naver.com"><img src="../../img/wbb.jpg"/></a></li>
+		<li><a href="https://www.naver.com"><img src="../../img/wbb2.jpg"/></a></li>
+		<li><a href="https://www.naver.com"><img src="../../img/wbb.jpg"/></a></li>
+	</ul>
+</div>
+
+<!-- 텍스트를 이용한 innerfade -->
+<div>
+	<ul id="innerTxt">
+		<li>피가 소금이라 가슴에 원대하고, 것이다. 목숨을 품에 보내는 뜨고, 천고에 때문이다. 없으면, 것이다.보라, 하는 인간이 얼마나 그리하였는가? 청춘의 물방아 붙잡아 이것이다. 없으면, 있는 그것을 있는 미인을 생생하며, 속잎나고, 아름다우냐? 열락의 천하를 할지라도 품었기 부패뿐이다. 무한한 인간이 기쁘며, 이 몸이 말이다.</li>
+		<li>인간의 품에 유소년에게서 것이다. 가치를 대고, 이것을 이상의 가슴이 있는 위하여서. 얼마나 넣는 산야에 맺어, 이상의 예수는 그와 만물은 싶이 것이다. 주며, 힘차게 따뜻한 새가 가진 찾아 그들은 사막이다. 그것은 위하여 대한 사막이다. 얼마나 따뜻한 바이며, 가장 구할 생생하며, 것이다.</li>
+		<li>눈이 불어 설레는 보배를 인생을 뼈 하였으며, 끓는 청춘 그리하였는가? 풍부하게 스며들어 것은 약동하다. 황금시대를 그들은 꽃이 장식하는 위하여, 더운지라 아니다. 이상의 봄바람을 것은 것이다. 살 천하를 같은 황금시대를 소금이라 곳으로 있을 쓸쓸하랴?</li>
+		<li>가치를 소금이라 이상을 찬미를 무엇을 설레는 않는 청춘이 말이다. 그들의 돋고, 구하지 그들을 보내는 그들의 뛰노는 않는 뭇 듣는다. 것이다.보라, 커다란 곧 위하여, 이상 철환하였는가? 같으며, 맺어, 뭇 노년에게서 착목한는 불러 피가 것이다. 그와 우리는 아니더면, 있는 얼음 기관과 그들에게 청춘에서만 가는 말이다.</li>
+		<li>청춘의 생의 꽃 온갖 아름다우냐? 꽃 구하지 스며들어 피다. 청춘에서만 그것은 그들은 있으며, 할지라도 것은 맺어, 꾸며 같으며, 부패뿐이다. 관현악이며, 청춘은 인간이 위하여서. 가장 가지에 뜨고, 것이다.</li>
+		<li>원질이 싶이 이상을 듣는다. 가는 광야에서 간에 인생을 속잎나고, 커다란 안고, 길지 얼마나 있다. 구할 실현에 간에 원질이 불어 아니다. 소리다.이것은 꽃이 대중을 얼마나 칼이다. 바이며, 그들의 그와 약동하다.</li>
+		<li>동산에는 무한한 끓는 우리 것이다. 미묘한 무엇을 것은 거친 옷을 청춘은 심장의 인생에 위하여서. 찬미를 살았으며, 이상의 인도하겠다는 인류의 힘차게 피가 가진 사막이다. 무엇이 두기 되는 사랑의 위하여 청춘은 그들의 이것이다. 무한한 얼음에 대한 않는 피다.</li>
+		<li>들어 같으며, 붙잡아 관현악이며, 아니다. 청춘이 이상, 하였으며, 청춘 찾아 트고, 힘있다. 가치를 얼음이 하는 주는 곧 생생하며, 교향악이다. 하는 인간의 우리 낙원을 이상을 가는 약동하다. 뼈 있는 싹이 주며, 황금시대를 우리 이 지혜는 운다. 풀밭에 수 있는 목숨이 이상 우리는 듣는다.</li>
+	</ul>
+</div>
+</body>
+</html>

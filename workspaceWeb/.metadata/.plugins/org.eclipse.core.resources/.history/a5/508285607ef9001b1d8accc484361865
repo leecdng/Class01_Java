@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		.c1{
+			width:200px;
+			height:200px;
+		}
+		
+		#d1{
+			background-color:lightblue;
+			float:left;
+		}
+			
+		#d2{
+			background-color:#ccc;
+			float:left;
+		}
+		
+		#d3{
+			background-color:pink;
+			float:left;
+		}
+		
+		#d4{
+			background-color:yellow;
+			clear:both;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="d1" class="c1">
+			<div class="c1" style="background-color:black;"></div>
+			<div class="c1" style="background-color:#999;"></div>
+		</div>
+		<div id="d2" class="c1"></div>
+		<div id="d3" class="c1"></div>
+		<div id="d4" class="c1"></div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

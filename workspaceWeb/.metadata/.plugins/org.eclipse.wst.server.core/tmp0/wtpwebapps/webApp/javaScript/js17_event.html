@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#d1{
+		height:200px;
+		background-color:pink;
+		padding:50px;
+	}
+	
+	#d1>div{
+		height:100px;
+		background-color:lightblue;
+		padding:50px;
+	}
+	
+	#d1 h1{
+		background-color:orange;
+	}
+</style>
+<script>
+
+	/*
+		onmouseover, onmouseout : 이벤트 객체 내부의 각 태그마다 이벤트가 발생한다.
+		onmouseenter, onmouseleave : 이벤트 객체 내부에 있을 때 한 번만 이벤트 발생. 이벤트 내부의 각 태그는 이벤트가 발생하지 않음.
+		
+		onmousedown
+		onmouseup
+		onmousemove
+		
+		onfocus : 객체에 커서가 들어가면
+		onblur : 객체에 커서가 나가면
+		
+		onsubmit:
+		onreset:
+			
+		onkeydown: 누른 상태
+		onkeypress : 누른 상태
+		onkeyup: 누른 후 상태
+		
+		onchange: value의 값이 변경되면 발생한다.
+		
+		onload
+		onresize : window의 크기가 변경되면 발생한다.
+	
+	*/
+	var cnt=0;
+	function mouseOverTest(){
+		document.getElementById("view").innerHTML = "<h1>"+ ++cnt + "</h1>";
+	}
+	
+	var count=0;
+	function mouseOutTest(){
+		document.getElementById("view2").innerHTML = "<h1>"+ ++count + "</h1>";
+	}
+	
+	function cursorTest(id){
+		id.style.fontSize = "3em";
+		id.style.backgroundColor = "#eee";
+	}
+	
+	function cursorTest2(blur){
+		blur.style.fontSize = "1em";
+		blur.style.backgroundColor = "#fff";
+		/*
+		if(blur.value==""){
+			alert("내용을 입력해주세요.");
+		}*/
+	}
+	
+	function formCheck(){
+		if(document.frm.userid.value==""){
+			alert("아이디를 입력하세요.")
+			return false;
+		}
+		if(document.getElementById("username").value==""){
+			alert("비밀번호를 입력하세요.")
+			return false;
+		}
+		// 자바스크립트에서 submit 발생시킨다.
+		//document.getElementById("frm").submit();
+		document.frm.submit();
+	}
+	
+	// userid에는 영문자만 입력되도록 설정
+	function keyCheck(){
+		// 방금 입력된 key의 코드를 구하면
+		var key = event.keyCode; // 65~90, 97~122
+		if(!(key>=65 && key<=90 || key>=97 && key<=122 || key==8)){ // 영문자 &&, || 어차피 ||보다 &&가 먼저 실행됨
+			// 영문자 외의 문자가 입력됐을 때 입력값 취소
+			event.returnValue = false;		
+		}
+	}
+	
+	// onchange 이벤트
+	function dataChange(){
+		console.log("데이터바뀜")
+	}
+	
+	// onresize 이벤트
+	function winSize(){
+		console.log("창의 크기가 변경됨");
+	} // ㅡㅡ?????
+			
+			
+	
+	
+</script>
+</head>
+<body onresize="winSize()">
+<div>
+	<form name="frm" id="frm" method="get" action="test.jsp">
+		<input type="text" name="userid" id="user" onfocus="cursorTest(this)" onblur="cursorTest2(this)" onkeydown="keyCheck()"/><br/>
+		<input type="text" name="username" id="username" onfocus="cursorTest(this)" onblur="cursorTest2(this)" onchange="dataChange()"/><br/>
+		<input type="button" value="클릭button" onclick="formCheck()"/><br/>
+		
+		<input type="submit"/><br/> 
+   		<input type="image" src="../img/wbb2.jpg" width="100"/>
+   		<button>등록</button>
+		
+	</form>
+</div>
+
+
+<!-- <div id="d1" onmouseover="mouseOverTest()" onmouseout="mouseOutTest()"> -->
+<div id="d1" onmouseenter="mouseOverTest()" onmouseleave="mouseOutTest()" onmousedown="this.style.backgroundColor='yellow'">
+	<div>
+		<h1>Mouseover, Mouseout 테스트</h1>
+	</div>
+</div>
+<div id="view"></div>
+<div id="view2"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

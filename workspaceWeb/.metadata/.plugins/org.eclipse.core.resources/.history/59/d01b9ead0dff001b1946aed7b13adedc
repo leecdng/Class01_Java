@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function methTest(){
+		// 수학 함수
+		var n = 123.568;
+		
+		document.write("PI -> " + Math.PI); // 원주율
+		document.write("<br/>pow -> " + Math.pow(3,4)); // 3의 4승
+		document.write('<br/>sqrt ->' + Math.sqrt(10)); // 루트 10
+		
+		document.write('<br/>abs -> ' + Math.abs(-88)); // 절대값
+		document.write("<br/>round -> "+ Math.round(n)); // 반올림
+		document.write('<br/>ceil -> ' + Math.ceil(n)); //올림
+		document.write('<br/>floor -> ' + Math.floor(n)); // 버림
+		
+		// 가장 큰 값, 작은 값 구하기
+		document.write('<br/>max - > ' + Math.max(85,4,56,87,4,64,859,54));
+		document.write('<br/>min - > ' + Math.min(85,4,56,87,4,64,859,54));
+		
+		// 난수 구하기 - 광고 무작위로 띄울 때 사용할 수 있음
+		document.write('<br/>random -> ' + Math.random()); // 0~1사이의 값
+	}
+	
+	// 함수 호출
+	// methTest();
+	
+</script>
+</head>
+<body onload="methTest"> <!-- body에 있는 모든 내용을 실행한 후 onload 실행 -->
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* 초기화 */
+
+ul, li{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+#main{
+	width:606px;
+	border:1px solid #ddd;
+	padding:10px;
+	overflow:auto;
+	font-size:0.9em;
+}
+
+#main>*{
+	float:left;
+}
+
+#main>ul:first-of-type{
+	width:400px;
+}
+
+#main>ul:first-of-type>li{
+	height:152px;
+}
+
+#main>ul>li{
+	width:178px;
+	margin:10px;
+	border:1px solid #ddd;
+	float:left;
+}
+
+
+/* 토픽 */
+#main>div{
+	width:178px;
+	border:1px solid #ddd;
+	margin:10px;
+	float:left;
+}

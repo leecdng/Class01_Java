@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+	function ajaxStart(){
+		// XMLHttpRequest 객체 생성하여 비동기식 처리를 한다.
+		var xhttp = new XMLHttpRequest();
+		
+		// ------------ 서버에 요청 후 가져온 정보를 처리하는 곳 ------------
+		xhttp.onreadystatechange = function(){
+			// 서버에서 정보를 가져오면 div에 보여주는 작업을 한다.
+			/* readuState : XMLHttpRequest 객체의 처리 상태를 가지고 있음
+							0 : 초기화 실패, 1: 서버에는 연결됨, 2: 요청이 접수됨 3: 처리 요청함 , 4: 요청을 완료함
+				status : 요청처리 상태 결과를 반환한다.
+						(200:정상처리, 403:금지, 404:찾을 수 없음(파일명 오류 등))
+				statusText : 'OK', 'Not Found'
+				responseText : 서버에서 전달받은 정보가 있음 --- responseText가 결과를 가지고 있다는 뜻
+			*/
+			console.log('readyState', this.readyState);
+			console.log('Status', this.status);
+			console.log(this.responseText);
+			if(this.readyState==4 && this.status==200){ // 정상
+				document.getElementById('ajaxResult').innerHTML = this.responseText;
+				
+			}
+		}
+		
+		// 서버에 정보를 요청
+		//데이터 전송 방식(post, get), 서버에서 가져올 데이터, 동기식(false)/비동기식(true) 선택
+		xhttp.open('GET', 'ajax_test.txt', true);
+		xhttp.send(); // 서버에 요청 보냄
+	}
+</script>
+</head>
+<body>
+<button onclick="ajaxStart()">javascript로 ajax 실행하기</button>
+<div id="ajaxResult"></div>
+</body>
+</html>

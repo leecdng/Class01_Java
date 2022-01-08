@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	var txt = "자바스크립트를 이용한 문자열 처리 함수";
+	
+	// 글자 수 구하기
+	document.write('글자 수 -> ', txt.length); // length에 소괄호 안 씀
+	// indexOf(), lastIndexOf :  문자가 없으면 -1
+	document.write('<br/>indexOf -> ', txt.indexOf('트'));
+	// search : 문자가 없으면 -1
+	document.write('<br/>search -> ', txt.search('트'));
+	// 문자열 일부 구하기
+	// slice(index, index), substring(index, index), substr(index, count)
+	document.write('<br/>slice -> ', txt.slice(3, 6));
+	document.write('<br/>substring -> ', txt.substring(3, 6));
+	document.write('<br/>substr -> ', txt.substr(2, 3)); //2부터 3개
+	
+	document.write('<br/>replace -> ', txt.replace("스크립트", "Script"));
+	
+	
+	var txt2 = "Hello!!! JavaScript....";
+	
+	document.write('<br/>toUpperCase -> ', txt2.toUpperCase());
+	document.write('<br/>toLowerCase -> ', txt2.toLowerCase());
+	
+	document.write('<br/>concat - > ', txt.concat(txt2)); //txt + txt2
+	document.write('<br/>charAt -> ', txt2.charAt(2));
+	document.write('<br/>charCodeAt -> ', txt2.charCodeAt(2));
+</script>
+</body>
+</html>

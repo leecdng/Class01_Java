@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<pre>
+	table태그 : 표의 시작과 끝
+	tr: 표의 줄을 생성
+	td, th: 줄에 칸 생성, 컨텐츠 표시하는 곳
+	</pre>
+	
+	<table border="1" width="500" height="500">
+		<tr>
+			<td>테이블태그 연습중</td>
+			<td>코스모스</td>
+			<td><img src="../img/wbb2.jpg" width="100"/></td>
+		</tr>
+		<tr>
+			<td>두 번째 줄</td>
+			<td>2222</td>
+			<td>dddd</td>
+		</tr>
+		<tr>
+		</tr>
+	
+	</table>
+
+
+</body>
+</html>

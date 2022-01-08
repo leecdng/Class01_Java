@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function getNowDate(){
+		// 현 시스템(클라이언트 컴퓨터)의 날짜와 시간 얻어오기
+		
+		var now = new Date();
+		document.getElementById("nowDate").innerHTML = now;
+		
+		var d1 = new Date(2020,10,4);
+		document.getElementById("nowDate").innerHTML = d1;
+		
+	}
+	
+</script>
+</head>
+<body onload="getNowDate()">
+<div id="nowDate"></div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="contener">
+		<div><img src="../img/wine1"/></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div>맛과 멋, 그리고 wine...</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+8월 06, 2021 11:34:28.77 NEW SESSION
+8월 06, 2021 11:34:28.77 [13284:12740:0806/113428.071:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Request canceled.
+8월 06, 2021 11:34:29.839 [13284:12740:0806/113429.839:ERROR:device_event_log_impl.cc(214)] [11:34:29.839] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+8월 06, 2021 12:10:13.948 [13284:12740:0806/121013.948:ERROR:page_load_metrics_update_dispatcher.cc(170)] Invalid first_paint (unset) for first_image_paint 0.068 s
+8월 06, 2021 12:10:13.960 [13284:12740:0806/121013.960:ERROR:page_load_metrics_update_dispatcher.cc(170)] Invalid first_paint 0.084 s for first_image_paint 0.068 s
+8월 06, 2021 12:10:15.131 [13284:12740:0806/121015.130:ERROR:page_load_metrics_update_dispatcher.cc(170)] Invalid first_paint 0.084 s for first_image_paint 0.068 s
+8월 06, 2021 12:10:16.267 [13284:12740:0806/121016.267:ERROR:page_load_metrics_update_dispatcher.cc(170)] Invalid first_paint 0.084 s for first_image_paint 0.068 s
+8월 06, 2021 12:10:18.963 [13284:12740:0806/121018.963:ERROR:page_load_metrics_update_dispatcher.cc(170)] Invalid first_paint 0.084 s for first_image_paint 0.068 s
+8월 06, 2021 12:10:32.738 [13284:12740:0806/121032.738:ERROR:page_load_metrics_update_dispatcher.cc(170)] Invalid first_paint 0.084 s for first_image_paint 0.068 s
+8월 06, 2021 12:10:34.177 [13284:12740:0806/121034.177:ERROR:page_load_metrics_update_dispatcher.cc(170)] Invalid first_paint 0.03 s for first_image_paint 0.014 s
+8월 06, 2021 12:10:34.381 [13284:12740:0806/121034.381:ERROR:page_load_metrics_update_dispatcher.cc(170)] Invalid first_paint 0.03 s for first_image_paint 0.014 s
+8월 06, 2021 14:26:02.119 [13284:10544:0806/142602.119:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+
+8월 13, 2021 09:37:04.215 NEW SESSION
+8월 13, 2021 09:37:04.215 [3380:11712:0813/093704.215:ERROR:device_event_log_impl.cc(214)] [09:37:04.215] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+8월 13, 2021 09:37:43.820 [3380:11712:0813/093743.820:ERROR:fallback_task_provider.cc(119)] Every renderer should have at least one task provided by a primary task provider. If a fallback task is shown, it is a bug. Please file a new bug and tag it as a dependency of crbug.com/739782.
+8월 13, 2021 09:38:15.322 [3380:11712:0813/093815.322:ERROR:device_event_log_impl.cc(214)] [09:38:15.322] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+8월 13, 2021 10:27:53.546 [3380:11712:0813/102753.545:ERROR:device_event_log_impl.cc(214)] [10:27:53.545] USB: usb_service_win.cc:258 Failed to get device driver name: 요소가 없습니다. (0x490)
+
+8월 20, 2021 09:53:12.902 NEW SESSION
+8월 20, 2021 09:53:12.902 [7724:8848:0820/095312.901:ERROR:device_event_log_impl.cc(214)] [09:53:12.901] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+8월 20, 2021 09:53:17.935 [6088:5480:0820/095317.935:ERROR:device_event_log_impl.cc(214)] [09:53:17.935] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+8월 20, 2021 14:15:53.191 [6088:5480:0820/141553.191:ERROR:device_event_log_impl.cc(214)] [14:15:53.191] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+8월 20, 2021 14:16:00.404 [6088:5480:0820/141600.404:ERROR:fallback_task_provider.cc(119)] Every renderer should have at least one task provided by a primary task provider. If a fallback task is shown, it is a bug. Please file a new bug and tag it as a dependency of crbug.com/739782.
+
+8월 20, 2021 23:52:48.73 NEW SESSION
+8월 20, 2021 23:52:48.73 [7200:4960:0820/235248.071:ERROR:device_event_log_impl.cc(214)] [23:52:48.071] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+8월 22, 2021 17:13:23.808 [7200:21696:0822/171323.807:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+8월 22, 2021 17:13:24.35 [7200:20552:0822/171324.035:ERROR:get_updates_processor.cc(257)] PostClientToServerMessage() failed during GetUpdates with error 2
+8월 22, 2021 17:13:24.551 [7200:21696:0822/171324.550:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+8월 22, 2021 17:13:35.888 [7200:21696:0822/171335.888:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -105
+8월 22, 2021 17:13:35.890 [7200:12064:0822/171335.890:ERROR:get_updates_processor.cc(257)] PostClientToServerMessage() failed during GetUpdates with error 2
+8월 22, 2021 17:13:43.136 [7200:21696:0822/171343.136:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -105
+
+8월 24, 2021 09:49:27.901 NEW SESSION
+8월 24, 2021 09:49:27.901 [10076:10700:0824/094927.901:ERROR:device_event_log_impl.cc(214)] [09:49:27.901] Bluetooth: bluetooth_adapter_winrt.cc:1073 Getting Default Adapter failed.
+8월 24, 2021 10:25:37.11 [10076:10700:0824/102537.010:ERROR:command_buffer_proxy_impl.cc(350)] GPU state invalid after WaitForGetOffsetInRange.
+8월 24, 2021 10:25:37.11 [10076:10700:0824/102537.011:ERROR:gpu_process_host.cc(995)] GPU process exited unexpectedly: exit_code=34
+8월 24, 2021 10:40:57.442 [10076:10700:0824/104057.442:ERROR:fallback_task_provider.cc(119)] Every renderer should have at least one task provided by a primary task provider. If a fallback task is shown, it is a bug. Please file a new bug and tag it as a dependency of crbug.com/739782.
+8월 24, 2021 15:28:42.721 [10076:10700:0824/152842.720:ERROR:fallback_task_provider.cc(119)] Every renderer should have at least one task provided by a primary task provider. If a fallback task is shown, it is a bug. Please file a new bug and tag it as a dependency of crbug.com/739782.
+8월 24, 2021 20:40:26.169 [10076:10700:0824/204026.169:ERROR:device_event_log_impl.cc(214)] [20:40:26.169] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다. (0x3E3)
+
+9월 07, 2021 23:27:59.817 NEW SESSION
+9월 07, 2021 23:27:59.817 [4520:17236:0907/232759.814:ERROR:device_event_log_impl.cc(214)] [23:27:59.814] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+9월 10, 2021 24:47:02.903 NEW SESSION
+9월 10, 2021 24:47:02.904 [15180:8976:0910/004702.899:ERROR:device_event_log_impl.cc(214)] [00:47:02.899] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 24:48:03.480 [15756:4168:0910/004803.480:ERROR:device_event_log_impl.cc(214)] [00:48:03.480] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+9월 10, 2021 24:53:09.533 [15756:4168:0910/005309.532:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+9월 10, 2021 24:53:10.132 [15756:4168:0910/005310.131:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/core/sdk/sdk.js (1)
+9월 10, 2021 24:53:11.437 [15756:4168:0910/005311.437:ERROR:CONSOLE(1)] "Session is unregistering, can't dispatch pending call to DOM.getDocument", source: devtools://devtools/bundled/core/sdk/sdk.js (1)

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script>
+	// input 입력 시 아이디, 비밀번호 라벨 사라지고 지우기 버튼 보이기
+	function inputTxt(label, button){
+		var lbl = document.getElementById(label);
+		lbl.style.display = "none";
+		
+		var btn = document.getElementById(button);
+		btn.style.display = "block";
+	}
+	
+	// ON / OFF 전환
+	function changeBtn(){
+		var btn = document.getElementById('ip_switch');
+		
+		if(btn.innerHTML=='ON'){
+			btn.innerHTML = 'OFF';
+			btn.style.color = '#aaa';
+		} else if(btn.innerHTML=='OFF'){
+			btn.innerHTML = 'ON';
+			btn.style.color = '#4c87ee';
+		}
+	}
+	
+	
+	// 아이디, 비밀번호 체크하기
+	function logCheck(){
+		// 아이디와 비밀번호 있는지 없는지 확인
+		var id = document.getElementById("id").value;
+		if(id==""){
+			alert("아이디를 입력하세요.");
+			return false;
+		}
+		
+		var pw = document.getElementById("pw").value;
+		if(pw==""){
+			alert("비밀번호를 입력하세요.");
+			return false;
+		}
+		
+		// 아이디와 비밀번호가 모두 입력된 경우
+		return true;
+	}
+	
+	// IP 보안 팝업 띄우기
+	function ipPopup(){
+		window.open("https://logins.daum.net/accounts/loginform/popup/ipsecuritysettingform.do", "win", "width=477px, height=661px");
+	}
+	
+	
+</script>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		<h1 id="logo">
+			<a href="https://www.daum.net/"></a>
+		</h1>
+	</div>
+	<div id="container">
+		<div id="contents">
+			<div id ="sns_login"><a href="#">다른 방법으로 로그인</a></div>
+			<form method="post" action="aaa.jsp" onsubmit="return logCheck()">
+				<div class="input_box">
+					<input id="id" name="id" type="text" oninput="inputTxt('idLbl', 'del_id')"/>
+					<label id="idLbl">아이디</label>
+					<button id="del_id" class="delBtn"><span>X</span></button>
+				</div>
+				<div class="input_box">
+					<input id="pw" name="pw" type="password" oninput="inputTxt('pwLbl', 'del_pw')"/>
+					<label id="pwLbl">비밀번호</label>
+					<button id="del_pw" class="delBtn"><span>X</span></button>
+				</div>
+				<input id="loginBtn" type="submit" value="로그인"/>
+				<div class="login_bottom_txt">
+					<input id="check" name="check" type="checkbox"/><label>로그인 상태 유지</label>
+					<span>
+						<a id="ip_secure" href="#none" target="_blank" title="새창" onclick="ipPopup()">IP보안</a>
+						<a id="ip_switch" href="#" onclick="changeBtn()">ON</a>
+					</span>
+				</div>
+			</form>
+			<div id="find_info">
+				<a href="https://member.daum.net/find/id.do?action=home" target="_blank" title="새창">아이디 찾기</a>
+				<span class="bar">|</span>
+				<a href="https://member.daum.net/find/password.do?action=daumid-check" target="_blank" title="새창">비밀번호 찾기</a>
+			</div>
+			<div id="ad">
+				<a href="https://accounts.daum.net/integration/start?rtnUrl=https://www.daum.net?fromdac=pc_login_banner" target="_blank" title="새창"></a>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<a href="https://www.kakaocorp.com/page/" target="_blank" title="새창">© Kakao Corp.</a>
+		<span class="bar">|</span>
+		<a href="https://cs.daum.net/faq/59/14970.html" target="_blank" title="새창">고객센터</a>
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

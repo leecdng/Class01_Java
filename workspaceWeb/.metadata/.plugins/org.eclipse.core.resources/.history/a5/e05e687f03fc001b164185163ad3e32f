@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	document.write("자바스크립트에서 쓰기");
+	document.write("<img src='../img/wbb2.jpg' width='200'/>");
+	
+	// 자바스크립트는 변수가 데이터에 따라서 데이터형이 정해진다.
+	// var, let
+	var a = 100;
+	var b = '홍길동';
+	var c = 5.5;
+	
+	// var d;
+	
+	document.write("<br/>a=", a);
+	document.write("<br/>d="+d +"<br/>"); // d가 없어서 에러. 하지만 사용자한테는 안 보이고 F12 눌러서 봐야 함
+</script>
+</head>
+
+<body>
+
+
+글자 쓰기
+
+</body>
+</html>
+
+<script>
+document.write("자바스크립트에서 쓰기");
+</script>

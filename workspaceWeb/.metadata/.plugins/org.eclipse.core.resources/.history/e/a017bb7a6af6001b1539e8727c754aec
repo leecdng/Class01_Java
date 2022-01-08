@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+	스타일시트
+	cascade style sheet
+	
+	
+	인라인 스타일 : html태그에 style속성을 이용한다.
+	임베디드 스타일
+	외부 파일을 이용한 스타일
+
+
+ -->
+
+
+</head>
+<body>
+
+<ul>
+	<li>복숭아</li>
+	<li style='color:#ff0000'>사과</li>
+	<li>오렌지</li>
+	<li>파인애플</li>
+</ul>
+
+
+</body>
+</html>

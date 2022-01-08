@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#container{
+		width:1000px;
+		margin:0 auto;
+	}
+	
+	#container img{
+		width:100%;
+	}
+	
+	/* 공지사항 */
+	#notice{
+		position:absolute;
+		top:300px; left:300px;
+		width:400px;
+		height:400px;
+		border:1px solid #ddd;
+		box-sizing:border-box;
+	}
+</style>
+<script>
+	function pageInfo(){
+		var cont = document.getElementById("container");
+		console.log(cont.style.left);
+	}
+
+</script>
+</head>
+<body onload="pageInfo()">
+<div id="container">
+	<img src="../img/wbb.jpg"/>
+</div>
+<!-- div로 공지사항 만들기 -->
+<div id="notice">
+	<div>제목</div>
+	<div>컨텐츠</div>
+</div>
+
+</body>
+</html>

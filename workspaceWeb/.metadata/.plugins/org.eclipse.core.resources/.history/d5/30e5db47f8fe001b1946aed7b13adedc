@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#result{
+		background-color:lightblue;
+	}
+</style>
+<script>
+	// 연산자 : +,-,*,/,%,||,&&,!,>,<,>=,<=,+=,-=,*=, ++,--, ...
+	// if, if~else, while, for, do~while, break, continue, switch
+	
+	// alert("페이지가 로딩됨");
+	
+	// 구구단 구하는 함수
+	//			함수명(변수, 변수, ...)
+	function gugudan(dan){
+		var r ="";
+		for(i=2; i<=9; i++){ // 자바스크립트는 처음 넣는 데이터값에 의해서 데이터 타입이 정해짐
+			r += dan + "*" +i +"="+(dan*i)+ "<br/>";
+		}
+		
+		console.log(r);
+		document.getElementById("result").innerHTML = r;
+	}
+</script>
+</head>
+<body>
+<input type="button" value="Click하세요." onclick="gugudan(9); alert('구구단이 출력됨')"/> <!-- onclick은 자바스크립트 영역 자바스크립트 명령어 쓸 수 있음 -->
+<button>클릭하세요.</button>
+<div id="result">
+	결과가 출력될 위치
+</div>
+<img src="../img/wbb2.jpg" width="200"/>
+</body>
+</html>

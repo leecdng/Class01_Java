@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>img:이미지 표시하기</h1>
+<img src="../img/wbb.jpg"/>
+<img src="/webApp/img/wbb2.jpg"/>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	var txt = "자바스크립트를 이용한 문자열 처리 함수";
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+	$(function(){
+		// jquery의 이벤트 종류
+		/*
+			onclick, onmouseover(enter), onmouseout(leave), onchange, onload, onunload, onscroll
+			onfocus, onsubmit, onresize,
+			onkeydown, onkeyup, onkeypress, onkeyrelease
+			ondbclick, onreset, onblur
+		*/
+		// ========= 이벤트 처리 방법 1
+		$('h1').click(function(){
+			// 이벤트 처리하기
+			// this : 현재 이벤트가 발생한 태그 객체
+			console.log($(this).text());
+			$(this).css('background-color','yellow');
+			$(this).text('클릭 이벤트가 발생함');
+		});
+		
+		// ========= 이벤트 처리 방법 2
+		//		이벤트 종류, 구현할 실행문(함수)
+		$('h2').on('click', function(){
+			$(this).css('background-color','lightblue');
+		});
+		
+		// ========= 이벤트 처리 방법 3
+		// onmouseover(onmouseenter), onmouseout(onmouseleave);
+		// 마우스오버 -> 배경 pink, 마우스아웃 -> 배경 white
+		$('h3').on({
+			mouseenter : function(){
+				// 실행문
+				$(this).css('background-color','pink');
+			}, mouseleave : function(){
+				$(this).css('background-color','#fff');
+			}
+		});
+		
+		// ========= 이벤트 처리 방법 4
+		// 한 객체에 2개 이상의 이벤트가 같은 작업을 처리해야 할 때
+		$('input').on('click focus', function(){
+			$(this).val('click 또는 focus 이벤트가 발생함');
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<h3>jquery 이벤트 테스트</h3>
+	<h3>jquery 이벤트 테스트</h3>
+	<h3>jquery 이벤트 테스트</h3>
+	<h3>jquery 이벤트 테스트</h3>
+	<h3>jquery 이벤트 테스트</h3>
+	
+	
+	<h1>jquery 이벤트 테스트</h1>
+	<h1>jquery 이벤트 테스트</h1>
+	<h1>jquery 이벤트 테스트</h1>
+	<h1>jquery 이벤트 테스트</h1>
+	<h1>jquery 이벤트 테스트</h1>
+	
+	<h2>jquery 이벤트 테스트</h2>
+	<h2>jquery 이벤트 테스트</h2>
+	<h2>jquery 이벤트 테스트</h2>
+	<h2>jquery 이벤트 테스트</h2>
+	<h2>jquery 이벤트 테스트</h2>
+	
+	<input type="button" value="12345"/>
+	<input type="button" value="abcde"/>
+	<input type="button" value="가나다라"/>
+</body>
+</html>
+
+
+
+
+
+
+

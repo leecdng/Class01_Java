@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#map{
+		width:100%;
+		height:700px;
+		border:1px solid #ddd;
+		box-sizing:border-box;
+	}
+	
+	#initMap{
+		width:50%;
+		height:500px;
+	}
+</style>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZO3MrykFpNpemqO2zPtG5M9ADUXSoApw&&callback=initMap">
+//<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZO3MrykFpNpemqO2zPtG5M9ADUXSoApw&v=beta&callback=initMap">
+</script>
+<script>
+	// https://cloud.google.com/map-platform/
+	// https://maps.googleapis.com == https://developers.google.com/maps/
+	
+	// 위도, 경도
+	var latitude = 37.5729503;
+	var longitude = 126.9793578;
+	
+	function initMap(){
+		// 지도의 중심을 위도 경도 객체를 구한다.
+		var myCenter = new google.maps.LatLng(latitude, longitude);
+		// 지도를 그릴 때 필요한 기타 정보를 JSON 형식의 데이터로 생성한다.
+		var mapProperty = {	// 맵 옵션
+				center : myCenter,
+				zoom : 14, // 0~21까지의 값. 숫자가 클수록 확대된다.
+				mapTypeId : google.maps.MapTypeId.ROADMAP // 지도 종류 (ROADMAP, HYBRID, STEELITE, TERRAIN)
+		};
+		//												지도를 표시할 곳, 맵 옵션
+		var map = new google.maps.Map(document.getElementById("map"), mapProperty);
+		
+		// 마커 표시
+		var marker = new google.maps.Marker({
+			position : myCenter, // 마커의 위치 설정
+			map : map, // 마커를 표시할 맵
+			title : '마커에 표시될 내용',
+			icon : 'gmap_pin.png' // 이미지 파일명
+		});
+		
+		
+		// 마커 클릭 시 표시할 내용 만들기
+		var information = "위도:" + latitude+", 경도:"+longitude;
+			information += "<br/><img src='../../img/wbb2.jpg' width:'100' height='50' />";
+		
+		var info = new google.maps.InfoWindow({
+			content : information
+		});
+		
+		// 마커를 이벤트로 등록			이벤트 객체, 이벤트 종류 (on빼고), 			지도, 마커
+		google.maps.event.addListener(marker, "click", function(){ info.open(map, marker) }); // 이 지도와 이 마커를 열어라
+		
+		
+		// 반경 표시
+		var myCircle = new google.maps.Circle({
+			center : myCenter,	// 반경의 중심
+			radius : 1000, // 반경 1000m(1km)
+			strokeColor : '#0f0', // 반경선 색상
+			strokeOpacity : 0.5, // 반경선의 투명도 0~1 사이의 값
+			strokeWidth : 3, // 반경선의 두께 (px)
+			fillColor : '#00f', // 배경색
+			fillOpacity: 0.2 // 배경의 투명도
+		});
+		
+		myCircle.setMap(map);
+		
+		
+		// 
+	}
+	
+</script>
+</head>
+<body>
+<div id="map">
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	img {
+		width:200px;
+	}
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+	
+	$(function(){
+		// 선택자 : 태그, 아이디, 클래스
+		
+		// 선택자
+		$('body').css('background-color','pink');
+		$('#userid').attr('value', 'eunjeong');
+		// $('#userid').attr('type', 'password');
+		$('#userid').prop("readonly", true);
+		
+		// img에게 폭, 높이, 보더
+		$('img').css('height','250px').css('border','2px solid red');
+		
+		
+		
+		
+		console.log($('img').css('width'));
+		
+		console.log($('#userid').prop('readonly'));
+		console.log($('#userid').attr('value'));
+	});
+</script>
+
+</head>
+<body>
+<input type="text" name="userid" id="userid"/><br/>
+<img src="../img/wbb2.jpg"/>
+</body>
+</html>

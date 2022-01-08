@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jusorok>
+	<record>
+		<username>홍길동</username>
+		<tel>010-1234-8888</tel>
+		<addr>서울시 마포구 백범로</addr>
+	</record>
+	<record>
+		<username>이순신</username>
+		<tel>010-0000-1234</tel>
+		<addr>서울시 은평구 연서로</addr>
+	</record>
+	<record>
+		<username>김연경</username>
+		<tel>010-1111-1111</tel>
+		<addr>경기도 고양시 오부자로</addr>
+	</record>
+</jusorok>

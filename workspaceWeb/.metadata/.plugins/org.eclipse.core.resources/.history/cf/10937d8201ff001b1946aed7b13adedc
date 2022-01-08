@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function calcu(){
+		var n1 = document.getElementById("num1").value;
+		//document.getElementById("num1").value = 125;
+		var n2 = document.getElementById("num2").value;
+		
+		var plus = n1 + n2;
+		var minus = n1 - n2;
+		var mul = n1 * n2;
+		var div = n1 / n2;
+		
+		var r = n1+"+"+n2+"="+plus+"<br/>";
+		r += n1+"-"+n2+"="+minus+"<br/>";
+		r += n1+"*"+n2+"="+mul+"<br/>";
+		r += n1+"/"+n2+"="+div+"<br/>";
+		
+		document.getElementById("result").innerHTML = r;
+		
+	}
+</script>
+</head>
+<body>
+	첫 번째 수 <input id="num1" type="text"/><br/>
+	두 번째 수 <input id="num2" type="text"/><br/>
+	<input id="btn" type="button" value="결과 보기" onclick="calcu()"/><br/>
+	<div id="result">
+		
+	</div>
+</body>
+</html>

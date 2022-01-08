@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function getNowDate(){
+			
+		
+	}
+	
+</script>
+</head>
+<body onload="getNowDate()">
+<div id="nowDate"></div>
+</body>
+</html>

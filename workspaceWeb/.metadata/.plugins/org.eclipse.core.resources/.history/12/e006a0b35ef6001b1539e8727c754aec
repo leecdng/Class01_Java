@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border='1'>
+		<tr>
+			<td>AAAAAA</td>
+			<td>colspan='2'>BBBBBB</td>
+			<td>CCCCCC</td>
+		</tr>
+	
+	
+	</table>
+</body>
+</html>

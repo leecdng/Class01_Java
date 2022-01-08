@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div:nth-of-type(2n){
+		background-color:#ddd;
+	}
+</style>
+<script>
+	function arraySortTest(){
+		
+		
+	}
+</script>
+</head>
+<body onload="arraySortTest()">
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

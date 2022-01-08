@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+	$(function(){
+		// 숨기기
+		$('#hide').click(function(){
+			//				'slow','fast','normal',밀리ㅗ
+			$('img').first().hide(1000);
+		});
+		// 보여주기
+		$('#show').click(()=>{
+			$('img:first').show(1000);
+		});
+		// 보여주기와 숨기기 반복
+		$('#toggle').click(function(){
+			$('img:first').toggle(1000);
+		});
+		
+		
+		// 점점 흐리게, 점점 진하게 - fadeIn, fadeOut
+		$('#fadeIn').click(function(){
+			$('img:first').fadeIn(1000, function(){ //콜백 함수
+				alert('fadeIn 콜백함수 실행됨');
+			});
+		});
+		$('#fadeOut').click(function(){
+			$('img:first').fadeOut(1000);
+		});
+		$('#fadeToggle').click(function(){
+			$('img:first').fadeToggle(1000);
+		});
+		
+		
+		// slideUp, slideDown, slideToggle
+		$('#slideUp').click(function(){
+			$('img:first').slideUp(1000);
+		});
+		$('#slideDown').click(function(){
+			$('img:first').slideDown(1000);
+		});
+		$('#slideToggle').click(function(){
+			$('img:first').slideToggle(1000);
+		});
+	});
+</script>
+</head>
+<body>
+<button id="hide">숨기기(hide)</button>
+<button id="show">보여주기(show)</button>
+<button id="toggle">hide&show</button>
+
+<button id="fadeIn">점점진하게</button>
+<button id="fadeOut">점점흐리게</button>
+<button id="fadeToggle">fadeIn&fadeOut</button>
+
+<button id="slideUp">점점 위로</button>
+<button id="slideDown">점점 아래로</button>
+<button id="slideToggle">slideToggle</button>
+<hr/>
+<img src="../img/wbb2.jpg"/>
+<img src="../img/wbb.jpg" width="400"/>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

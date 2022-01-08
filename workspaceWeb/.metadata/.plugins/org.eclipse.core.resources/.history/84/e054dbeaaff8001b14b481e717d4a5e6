@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<style>
+	li{
+		float:left;
+	}
+
+</style>
+</head>
+<body>
+	<h1>외부파일을 이용한 스타일 적용</h1>
+	<ul>
+		<li><a href="#">홈</a></li>
+		<li><a href="#">이미지</a></li>
+		<li><a href="#">네이트</a></li>
+		<li><a href="#">동영상</a></li>
+	</ul>
+</body>
+</html>

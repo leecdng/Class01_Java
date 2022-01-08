@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>동영상 파일 재생</h1>
+<video controls>
+	<source src="../sound_movie/Wildlife.mp4" type='video/mp4'>
+</video>
+<video src='../sound_movie/sample_video.mp4' controls></video>
+
+
+</body>
+</html>

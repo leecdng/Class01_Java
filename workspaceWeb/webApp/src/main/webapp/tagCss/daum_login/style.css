@@ -1,0 +1,286 @@
+@charset "UTF-8";
+
+html, body{
+	height:100%;
+}
+
+body{
+	margin:0;
+	background-color:#eee;
+}
+
+h1, h2, h3, form, input, button {
+	margin:0;
+	padding:0;
+}
+
+
+
+a:link{
+	text-decoration:none;
+	color:#333;
+	letter-spacing:-0.05em;
+}
+
+a:visited{
+	text-decoration:none;
+	color:#333;
+	letter-spacing:-0.05em;
+}
+
+
+#wrap{
+	width:700px;
+	height:100%;
+	margin:0 auto;
+	background-color:#fff;
+}
+
+
+/* header */
+
+#header{
+	width:100%;
+	height:172px;
+}
+
+#logo{
+	width:142px;
+	height:58px;
+	margin:0 auto;
+	padding-top:84px;
+}
+
+#logo > a {
+	display:block;
+	width:100%;
+	height:58px;
+	background:url(logo_daum.png) no-repeat;
+	background-size:100%;
+	text-align:right;
+}
+
+
+
+/* container */
+
+#container{
+	width:100%;
+}
+
+#contents{
+	width:420px;
+	margin:0 auto;
+}
+
+#sns_login{
+	height:30px;
+	text-align:right;
+	font-size:15px;
+}
+
+#contents form{
+	clear:both;
+	width:100%;
+}
+
+.input_box{
+	position:relative;
+}
+
+#id, #pw{	/* ------------------------ */
+	width:100%;
+	height:48px;
+	margin-bottom:10px;
+	padding:0 14px;
+	box-sizing:border-box;
+	border:1px solid #ddd;
+	font-size:15px;
+	font-weight:bold;
+	letter-spacing:-0.05em;
+}
+
+.input_box > label{	/* ------------------------ */
+	position:absolute;
+	top:12px; left:16px;
+	font-size:15px;
+	color:#aaa;
+	letter-spacing:-0.05em;
+	pointer-events:none;
+}
+
+.delBtn{
+	display:none;
+	position:absolute;
+	top:0px; right:0px;
+	width:48px;
+	height:48px;
+	border:none;
+	background:none;
+	text-align:center;
+	cursor:pointer;
+}
+
+.delBtn > span{
+	display:inline-block;
+	width:22px;
+	height:22px;
+	border-radius: 22px;
+	background-color:#ddd;
+	color:#fff;
+	line-height:22px;
+	font-weight:bold;
+}
+
+
+#id:focus, #pw:focus{
+	border:1px solid #4c87ee;
+	outline:none;
+	background-color:#fafcff;
+}
+
+#loginBtn{
+	width:100%;
+	height:56px;
+	border:none;
+	background-color:#4c87ee;
+	font-size:18px;
+	font-weight:bold;
+	color:#fff;
+	letter-spacing:-0.05em;
+	cursor:pointer;
+}
+
+.login_bottom_txt{
+	width:100%;
+	height:30px;
+	margin-top:13px;
+	font-size:16px;
+	font-weight:bold;
+	color:#555;
+	vertical-align:middle;
+}
+
+#ip_secure:link, #ip_secure:visited{
+	color:#555;
+}
+
+#ip_switch:link{
+	color:#4c87ee;
+}
+
+#ip_switch:visited{
+	color:#4c87ee;
+}
+
+#check{
+	width:22px;
+	height:22px;
+	vertical-align:top;
+	opacity:0.4;  /* ------------------------ */
+}
+
+#check:checked{
+	opacity:1;  /* ------------------------ */
+}
+
+#check + label{
+	padding-left:8px;
+	letter-spacing:-0.05em;
+}
+
+.login_bottom_txt span{
+	display:block;
+	width:100px;
+	height:100%;
+	float:right;
+	text-align:right;
+}
+
+.login_bottom_txt a:link{
+	font-size:16px;
+	font-weight:bold;
+}
+
+.login_bottom_txt a:visited{
+	font-size:16px;
+	font-weight:bold;
+}
+
+
+#find_info{
+	margin-top:30px;
+	text-align:center;
+}
+
+#find_info a{
+	color:#666;
+}
+
+
+.bar{
+	display:inline-block;
+	padding:0px 10px;
+	color:#ccc;
+}
+
+
+#ad{
+	height:125px;
+	margin:96px 0 0;
+	box-sizing:border-box;
+	border:1px solid #ddd;
+	background-color:#eee;
+}
+
+#ad > a{
+	display:block;
+	height:100%;
+	background:url(bnr_login.jpg) no-repeat;
+	background-size:100%;
+}
+
+
+
+/* footer */
+
+#footer{
+	height:200px;
+	margin-top:46px;
+	padding-top:15px;
+	box-sizing:border-box;
+	border-top:1px solid #eee;
+	text-align:center;
+}
+
+#footer a, #footer span{
+	font-size:12px;
+}
+
+#footer a{
+	color:#666;
+}
+
+
+#footer span{
+	color:#999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

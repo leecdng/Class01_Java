@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	header{
+		width:800px;
+		height:50px;
+		margin:0 auto;
+		background:yellow;
+		
+	}
+
+</style>
+</head>
+<body>
+	<header></header>
+	<nav></nav>
+	<section></section>
+	<footer>
+	</footer>
+</body>
+</html>

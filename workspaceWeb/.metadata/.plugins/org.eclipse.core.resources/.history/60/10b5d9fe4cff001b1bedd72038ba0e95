@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		<h1 id="logo">
+			<a href="https://www.daum.net/"></a>
+		</h1>
+	</div>
+	<div id="container">
+		<div id="contents">
+			<a id ="sns_login" href="#">다른 방법으로 로그인</a>
+			<form>
+				<input id="id" type="text" value="아이디"/>
+				<input id="pw" type="text" value="비밀번호"/>
+				<input id="loginBtn" type="submit" value="로그인"/>
+				<p><input id="check" type="checkbox"/>로그인 상태 유지</p>
+				<a href="#">IP보안</a>
+				<a href="#">ON</a>
+			</form>
+			<div id="find_info">
+				<a href="https://member.daum.net/find/id.do?action=home" target="_blank" title="새창">아이디 찾기</a>
+				<a href="https://member.daum.net/find/password.do?action=daumid-check" target="_blank" title="새창">비밀번호 찾기</a>
+			</div>
+			<div id="ad">
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<a href="https://www.kakaocorp.com/page/" target="_blank" title="새창">© Kakao Corp.</a>
+		<a href="https://cs.daum.net/faq/59/14970.html" target="_blank" title="새창">고객센터</a>
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

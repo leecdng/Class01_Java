@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+<style>
+	/*
+		font-style : font-size, font-family, color
+		
+		font-size: px, pt, mm, cm, in(inch)
+					em:현재 글자크기 = 1em, 1.5em (1.5배의 글자 크기, 0.5em 절반크기, 3em 3배의 글자 크기)
+	
+	*/
+	
+	#f2{
+		font-size:1.8em;
+		font-family: 'Noto Sans KR', sans-serif;
+	}
+
+
+</style>
+</head>
+<body>
+	<ul>
+		<li id="f1">font style 폰트 스타일</li>
+		<li id="f2">AAAAAAA 폰트 크기</li>
+		<li id="f3">AAAAAAA 폰트 크기</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, intial-scale=1"/>
+<style>
+	body{
+		margin:0;
+	}
+	
+	ul, li{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	
+	li{
+		background:lightblue;
+		margin:10px;
+		border:1px solid #ddd;
+		width:98%;
+	}
+	
+	/* @media 반응형 스타일 지정 */
+	/* 0~600px */
+	/*	all, screen, print, tv, projection... */
+	@media all and (min-width:320px) and (max-width:600px){
+		li{
+			background:#ddd;
+		}
+	}
+	
+	@media all and (min-width:601px) and (max-width:900px){
+		li{
+			background:pink;
+		}
+	}s
+	
+	/* 600px ~ 900px */
+	
+	/* 900px ~ */
+	
+	
+</style>
+</head>
+<body>
+<ul>
+	<li>창크기 줄어들면 보통 모바일버전으로 바껴요 창크기 줄어들면 보통 모바일버전으로 바껴요창크기 줄어들면 보통 모바일버전으로 바껴요</li>
+	<li>출력하는것들은 다 ""안에 한번에 넣어줘요하는데출력하는것들은 다 ""안에 한번에 넣어줘요하는데출력하는것들은 다 ""안에 한번에 넣어줘요하는데</li>
+	<li>세 번째 li 경기 540명-서울 524명-부산 180명-경남 125명-인천 98명-경북 82명 등경기 540명-서울 524명-부산 180명-경남 125명-인천 98명-경북 82명 등경기 540명-서울 524명-부산 180명-경남 125명-인천 98명-경북 82명 등</li>
+	<li>지역 1천913명-해외 77명…누적 22만182명, 사망자 6명↑ 총 2천144명지역 1천913명-해외 77명…누적 22만182명, 사망자 6명↑ 총 2천144명</li>
+	<li>지난달 7일부터 38일 연속 네 자릿수…어제 의심환자 5만925건 검사지난달 7일부터 38일 연속 네 자릿수…어제 의심환자 5만925건 검사</li>
+	<li>경기 540명-서울 524명-부산 180명-경남 125명-인천 98명-경북 82명 등경기 540명-서울 524명-부산 180명-경남 125명-인천 98명-경북 82명 등경기 540명-서울 524명-부산 180명-경남 125명-인천 98명-경북 82명 등</li>
+</ul>
+</body>
+</html>

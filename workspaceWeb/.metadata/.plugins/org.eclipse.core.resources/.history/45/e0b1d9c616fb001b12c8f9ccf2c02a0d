@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/* 구조선택자
+		정수, 2n(짝수 번째), 2n+1(홀수 번째), 3n(3의 배수 번째), 2n+1
+		
+		nth-child(n)
+	*/
+	
+	body>ul>li:nth-child(2n){
+		background-color:pink;
+	}
+	
+	ul#title>li:nth-child(2n+1){
+		background-color:orange;
+	}
+	
+	/*
+		first-child : 처음 객체 선택
+		last-child : 마지막 객체 선택
+	*/
+	
+	#title>li:first-child{
+		color:white;
+	}
+	
+	#title>li:last-child{
+		color:green;
+	}
+	
+</style>
+</head>
+<body>
+	<ul id="title">
+		<li>홈페이지</li>
+		<li>자유게시판</li>
+		<li>Q&A</li>
+		<li>커뮤니티</li>
+		<li>고객센터
+			<ul>
+				<li>자주하는 질문</li>
+				<li>문의사항</li>
+			</ul>
+		</li>
+		<li>회사소개</li>
+	</ul>
+</body>
+</html>

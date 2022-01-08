@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 
+	colspan속성 : 칸병합
+	rowspan속성 : 행병합
+	
+ -->
+
+	<table border='1'>
+		<tr>
+			<td>AAAAAA</td>
+			<td>colspan='2'>BBBBBB</td>
+			<td>CCCCCC</td>
+		</tr>
+		<tr>
+			<td>DDDDDD</td>
+			<td>EEEEEE</td>
+			<td rowspan='2'>FFFFFF</td>
+			<td>HHHHHH</td>
+		</tr>
+	
+	
+	</table>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+</head>
+<body>
+	<div style="background-color:#ccc; width:200px; height:100px;">
+		div태그: 블럭 설정
+	</div>
+	<div>
+		두 번째 div태그
+	</div>
+</body>
+</html>

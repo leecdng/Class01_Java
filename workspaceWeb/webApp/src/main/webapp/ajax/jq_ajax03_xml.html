@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+	#memberList td{
+		width: 200px;
+		border:1px solid #ddd;
+	}
+</style>
+<script>
+	$(function(){
+		$('#btn').click(function(){
+			$.ajax({
+				url : 'ajax_xml_test.xml', // 파일 경로+파일명
+				dataType : 'xml',
+				success : function(result){ // 보통은 result라고 쓰지만 다르게 써도 됨 어차피 매개변수
+					console.log(result);
+					
+					// find()를 이용하여 태그의 정보를 얻어온다.
+					if( $(result).find('record').length > 0 ){ // record 안의 내용이 있으면 / 회원이 있으면
+						$(result).find('record').each(function(){	// record 태그 수만큼 반복
+							var username = $(this).find('username').text();
+							var tel = $(this).find('tel').text();
+							var addr = $(this).find('addr').text();
+							
+							var tag = '<tr><td>' + username + '</td><td>' + tel + '</td><td>' + addr + '</td></tr>';
+							$('#memberList').append(tag);
+						}); 
+					}
+					
+				}, error : function(request, status, ){
+					console.log('xml파일 가져오기 실패');
+					console.log(request.responseText);
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<button id="btn">AJAX로 XML 정보 비동기식으로 가져오기</button>
+<hr/>
+<table id="memberList">
+</table>
+</body>
+</html>

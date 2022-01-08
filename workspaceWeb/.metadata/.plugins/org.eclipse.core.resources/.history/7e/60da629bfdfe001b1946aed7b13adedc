@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	첫 번째 수 <input id="num1" type="text" value=""/><br/>
+	두 번째 수 <input id="num2" type="text" value=""/><br/>
+	<input id="btn" type="button" value="결과 보기"/><br/>
+</body>
+</html>

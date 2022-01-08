@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>UL, OL태그</title>
+</head>
+<body>
+	<pre>
+	ul 태그: 순서가 없는 리스트 태그 (Un oriented List)
+		
+	li 태그: ul, ol 태그 내에 목록을 표시하는 태그
+	</pre>
+	<!-- 
+		type 속성 : disk(채워진 원), circle(안이 빈 원), square (채워진 사각형), 
+	 -->
+	<ul type="disk">
+		<li>자바</li>
+		<li>스프링</li>
+		<li>마이바티스</li>
+		<li>파이썬</li>
+	</ul>
+	
+	<ol>
+		<li>자바</li>
+		<li>스프링</li>
+		<li>마이바티스</li>
+		<li>파이썬<img src="../img/wbb2.jpg"/></li>
+	</ol>
+	
+
+</body>
+</html>

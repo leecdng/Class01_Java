@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="wrap">
+		<button class="leftBtn">◀</button>
+		<div class="inner">
+			<ul>
+				<li><img src=""/></li>
+			</ul>
+		</div>
+		<button class="rightBtn">▶</button>
+	</div>
+</body>
+</html>

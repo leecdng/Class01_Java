@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	document.write("자바스크립트에서 쓰기");
+	document.write("<img src='../img/wbb2.jpg' width="200"/>");
+</script>
+</head>
+
+<body>
+
+
+글자 쓰기
+
+</body>
+</html>
+
+<script>
+document.write("자바스크립트에서 쓰기");
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<ul>
+	<li id="first">첫 번째</li>
+	<li>두 번째</li>
+</ul>
+<img src="../img/wbb2.jpg" width="200" id="i1"/>
+
+<script> // html 안에 있는 코드가 생성되고 난 다음에
+	// 자바스크립트에서 스타일시트 적용하기
+	// 자바스크립트 입장에서는 body내용은 document에 있는 것
+	
+	// html 태그의 속성을 제어한다.
+	var i = document.getElementById("i1");
+	
+	// background, background-color, background-image, ...
+	// font-size -> fontSize
+	
+	document.getElementById("first").style.backgroundColor="lightblue";
+	i.style.border="3px solid red";
+	
+	// html 태그의 속성을 제어한다.
+	i.src = "../img/wbb.jpg";
+	i.title = "풍선도움말";
+	
+	// li 태그 내의 내용을 변경하기
+	document.getElementById("first").innerHTML = "<img src='../img/wbb2'/>"
+</script>
+</body>
+</html>

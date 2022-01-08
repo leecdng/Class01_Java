@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#d1{
+		height:200px;
+		background-color:pink;
+		padding:50px;
+	}
+	
+	#d1>div{
+		height:100px;
+		background-color:lightblue;
+		padding:50px;
+	}
+	
+	#d1 h1{
+		background-color:orange;
+	}
+</style>
+<script>
+
+	/*
+		onmouseover, onmouseout : 이벤트 객체 내부의 각 태그마다 이벤트가 발생한다.
+		onmouseenter, onmouseleave : 이벤트 객체 내부에 있을 때 한 번만 이벤트 발생. 이벤트 내부의 각 태그는 이벤트가 발생하지 않음.
+		
+		onmousedown
+		onmouseup
+		onmousemove
+		
+		onfocus : 객체에 커서가 들어가면
+		onblur : 객체에 커서가 나가면
+	
+	*/
+	var cnt=0;
+	function mouseOverTest(){
+		document.getElementById("view").innerHTML = "<h1>"+ ++cnt + "</h1>";
+	}
+	
+	var count=0;
+	function mouseOutTest(){
+		document.getElementById("view2").innerHTML = "<h1>"+ ++count + "</h1>";
+	}
+	
+	function cursorTest(){
+		
+	}
+	
+</script>
+</head>
+<body>
+<div>
+	<input type="text" name="userid" id="userid" onfocus="cursorTest()"/><br/>
+	<input type="text" name="username" id="username" onfocus="cursorTest()"/><br/>
+	<input type="button" value="클릭"/><br/>
+</div>
+
+
+<!-- <div id="d1" onmouseover="mouseOverTest()" onmouseout="mouseOutTest()"> -->
+<div id="d1" onmouseenter="mouseOverTest()" onmouseleave="mouseOutTest()" onmousedown="this.style.backgroundColor='yellow'">
+	<div>
+		<h1>Mouseover, Mouseout 테스트</h1>
+	</div>
+</div>
+<div id="view"></div>
+<div id="view2"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

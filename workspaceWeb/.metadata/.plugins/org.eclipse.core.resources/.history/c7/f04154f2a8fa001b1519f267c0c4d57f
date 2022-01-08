@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body{
+		margin:0;
+	}
+	
+	#container{
+		width:600px;
+		height:516px;
+		padding:13px 11px 8px;
+		margin:0 auto;
+	}
+	
+	ul{
+		margin:0px;
+		padding:0;
+		list-style:none;
+	}
+	
+	li, div{
+		box-sizing:border-box;
+		font-size:11px;
+	}
+	
+	
+	
+	#left{
+		height:342px;
+		float:left;
+	}
+	
+	#left>li{
+		height: 153px;
+		float:left;
+		border:solid 1px #ddd;
+		background:#f5f5f5;
+		margin:0 18px 18px 0;
+	}
+	
+	#list3{
+		clear:both;
+	}
+	
+	
+	#right{
+		width:180px;
+		height:324px;
+		float:left;
+		border:solid 1px #ddd;
+	}
+	
+	
+	#bottom{
+		width:100%;
+		clear:both;
+	}
+	
+	#bottom > div{
+		height:153px;
+		border:solid 1px #ddd;
+		float:left;
+		margin-left:18px;
+	}
+	
+	#bottom > div:first-child{
+		margin-left:0;
+	}
+	
+	.w181{
+		width:181px;
+	}
+	
+	.w180{
+		width:180px;
+	}
+	
+	p{
+		margin:5px 10px 0;
+	}
+	
+	.txt{
+		color:#999;
+	}
+	
+	.q1, .a1{
+		padding:15px 13px 0;
+	}
+
+</style>
+</head>
+<body>
+	<div id="container">
+		<ul id="left">
+			<li class="w181">
+				<p class="q1">헐리우드 영화에서 러시안인이 주로 악당으로...</p>
+				<p class="a1">냉전시대의 산물입니다. 러시아는 미국의 오랜 숙명의 라이벌이기도 하구요...</p>
+			</li>
+			<li class="w180">
+			</li>
+			<li id="list3" class="w181">
+			</li>
+			<li class="w180">
+			</li>
+		</ul>
+		<div id="right">
+			<img src="../img/tab2_1.png"/>
+		</div>
+		<div id="bottom">
+			<div class="w181">
+				<img src="../img/tab2_2.png"/>
+				<p><b>견과류의 하루 적정 섭취량</b></p>
+				<p class="txt">견과류</p>
+			</div>
+			<div class="w180">
+				<img src="../img/tab2_3.png"/>
+				<p><b>견과류의 하루 적정 섭취량</b></p>
+				<p class="txt">견과류</p>
+			</div>
+			<div class="w181">
+				<img src="../img/tab2_4.png"/>
+				<p><b>견과류의 하루 적정 섭취량</b></p>
+				<p class="txt">견과류</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

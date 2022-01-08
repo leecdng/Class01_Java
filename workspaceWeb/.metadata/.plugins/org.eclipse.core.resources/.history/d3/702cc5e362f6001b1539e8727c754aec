@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>audio태그</h1>
+<!-- controls 선택재생할 수 있는 컨트롤 바가 생김 -->
+<audio src='../sound_movie/Kalimba.mp3' controls></audio>
+
+<audio controls>
+	<source src="../sound_moive/Kalimba.mp3" type='audio/mp3'/>
+	<source src="../sound_moive/Kalimba.ogg" type='audio/ogg/'>
+	
+
+</audio>
+
+
+
+</body>
+</html>

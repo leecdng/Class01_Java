@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+	body{
+		margin:0;
+	}
+	
+	ul, li{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	
+	div, h1, ul, li{
+		box-sizing:border-box;
+	}
+	
+	a{
+		text-decoration:none;
+		color:#333;
+	}
+	
+	/* wrap */
+	#wrap{
+		width:800px;
+		margin:0 auto;
+	}
+	
+	
+	/* header */
+	#header{
+		height:250px;
+	}
+	
+	.top{
+		height:200px;
+		padding-top:50px;
+	}
+	
+	#logo{
+		text-align:center;
+		font-size:40px;
+	}
+	
+	
+	/* 메뉴 */
+	
+	#nav{
+		height:50px;
+		border-top:2px solid #666;
+		border-bottom:1px solid #666;
+	}
+	
+	#gnb{
+		height:100%;
+		line-height:50px;
+
+	}
+	
+	#gnb > li{
+		position:relative;
+		width:160px;
+		height:100%;
+		float:left;
+		text-align:center;
+		/*margin:0 53px;*/
+	}
+
+	
+	#gnb > li:hover{
+		font-weight:bold;
+	}
+	
+	.sub{
+		display:none;
+		position:absolute;
+		top:47px; left:0;
+		width:100%;
+		border:1px solid #666;
+		background-color:#fff;
+		font-weight:normal;
+	}
+	
+	/* container */
+	#container{
+		height:500px;
+		background:url(wbb2.jpg) no-repeat;
+		background-size:100%;
+	}
+	
+</style>
+<script>
+	$(function(){
+		$('#gnb>li').mouseenter(function(){
+			$(this).children('ul').css('display','block');
+		}).mouseleave(function(){
+			$(this).children('ul').css('display','none');
+		});
+		
+		$('.sub>li>a').mouseenter(function(){
+			$(this).css('color','#b85900').css('font-weight','bold');
+		}).mouseleave(function(){
+			$(this).css('color','#333').css('font-weight','normal');
+		});
+	});
+</script>
+
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		<div class="top">
+			<h1 id="logo">GIRLSDAILY</h1>
+		</div>
+		<div id="nav">
+			<ul id="gnb">
+				<li><a href="#">OUTER</a>
+					<ul class="sub">
+						<li><a href="#">가디건</a></li>
+						<li><a href="#">자켓 & 점퍼</a></li>
+						<li><a href="#">베스트</a></li>
+						<li><a href="#">코트</a></li>
+						<li><a href="#">세일</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="#">TOP</a>
+					<ul class="sub">
+						<li><a href="#">Tee</a></li>
+						<li><a href="#">Cami</a></li>
+						<li><a href="#">knit</a></li>
+						<li><a href="#">Shirt & Blouse</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="#">DRESS</a>
+					<ul class="sub">
+						<li><a href="#">All</a></li>
+						<li><a href="#">바캉스룩</a></li>
+						<li><a href="#">Set</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="#">BOTTOM</a>
+					<ul class="sub">
+						<li><a href="#">레깅스</a></li>
+						<li><a href="#">힐링투엘브</a></li>
+						<li><a href="#">히든밴딩시리즈</a></li>
+						<li><a href="#">스커트</a></li>
+						<li><a href="#">팬츠</a></li>
+					</ul>
+				</li>
+				
+				<li><a href="#">SUMMER</a>
+					<ul class="sub">
+						<li><a href="#">HOLI스윔웨어</a></li>
+						<li><a href="#">at 22℃</a></li>
+						<li><a href="#">바캉스룩</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div> <!-- header -->
+		<div id="container">
+			
+		</div> <!-- container -->
+	</div> <!-- wrap -->
+</div>
+</body>
+</html>

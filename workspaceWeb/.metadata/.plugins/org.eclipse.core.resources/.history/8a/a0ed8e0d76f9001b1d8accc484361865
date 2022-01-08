@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="현재페이지에 설명을 작성하는 곳"/>
+	<meta name="keyword" content=""/>
+	<meta name="author" content="김연경"/>
+	<!-- <meta http-equiv="refresh" content="10"/> -->
+	<meta http-equiv="refresh" content="10; https://www.nate.com"/>
+	<title>Insert title here</title>
+</head>
+<body>
+	<h1>Meta태그</h1>
+	<pre>
+		meta태그는 현재 페이지의 참조사항을 기술하는 곳이다.
+		
+		description: 페이지 설명을 적는다.
+		keywords: 검색엔진에 검색하는 키워드로 사용되는 문자들을 표시한다.
+		author: 작성자
+		
+		http-equiv 속성
+			refresh : 특정시간 후 페이지 reload되거나, 다른 페이지로 이동하는 기능을 가진다. (초단위) - 포워드라고 부름
+	</pre>
+</body>
+</html>

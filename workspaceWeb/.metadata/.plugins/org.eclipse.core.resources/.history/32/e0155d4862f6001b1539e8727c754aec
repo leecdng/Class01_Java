@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>audio태그</h1>
+<audio src='../sound_movie/kalimba.mp3' controls></audio>
+
+
+
+</body>
+</html>

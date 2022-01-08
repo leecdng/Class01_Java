@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+	cascade style sheet
+	
+	인라인 스타일
+	임베디드 스타일
+	외부파일을 이용한 스타일
+
+ -->
+</head>
+<body>
+	<ul>
+		<li>복숭아</li>
+		<li>사과</li>
+		<li>오렌지</li>
+		<li>파인애플</li>
+	
+	</ul>
+</body>
+</html>

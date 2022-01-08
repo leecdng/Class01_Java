@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body{
+		margin:0;
+		background-color:orange;
+	}
+	
+	#container{
+		width:609px;
+		height:302px;
+		margin:0 auto;
+	}
+	
+	.left{
+		float:left;
+	}
+	
+	#wine_title{
+		clear:both;
+	}
+	
+	#txt1{
+		width:434px;
+		height:130px;
+		clear:both;
+		background-color:white;
+		
+	}
+	
+</style>
+</head>
+<body>
+	<div id="container">
+		<div class="left"><img src="../img/wine1.jpg"/></div>
+		<div class="left">
+			<div class="left"><img src="../img/wine2.jpg"/></div>
+			<div class="left"><img src="../img/wine3.jpg"/></div>
+			<div id="txt1">
+				<div id="wine_title"><img src="../img/wine_title.gif"/></div>
+				<div>맛과 멋, 그리고 wine...</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

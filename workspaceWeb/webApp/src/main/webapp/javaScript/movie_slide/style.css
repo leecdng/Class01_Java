@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+
+body, ul, ol, li, div, button, img{
+	margin:0;
+	padding:0;
+}
+
+ul, ol, li{
+	list-style:none;
+}
+
+
+#wrap{
+	width:860px;
+	height:114px;
+	margin: 10px auto 0;
+}
+
+button{
+	width:20px;
+	height:114px;
+	float:left;
+	box-sizing:border-box;
+	/*
+	border:none;
+	background-color:#666;
+	color:#fff;
+	*/
+}
+
+.inner{
+	position:relative;
+	width:820px;
+	height:100%;
+	float:left;
+	overflow:hidden;
+}
+
+.inner > ul{
+	position:absolute;
+	top:0px; left:0px;
+	width:1640px;
+}
+
+.inner li{
+	float:left;
+}

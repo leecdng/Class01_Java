@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div:nth-of-type(2n){
+		background-color:#ddd;
+	}
+</style>
+<script>
+	function arraySortTest(){
+		var num = {8,56,45,8,9,10,30,40,744,565,45,770,90,50};
+		var str = ['orange','apple','pineapple','strawberry','peach','tomato','melon','mango'];
+		
+	}
+</script>
+</head>
+<body onload="arraySortTest()">
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

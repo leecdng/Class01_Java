@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="test.js">
+// 이 안에는 자바스크립트 코드 안 먹음.
+// 새로 열어서 써줘야 함.
+</script>
+<script>
+	document.write("javascript실행됨<br/>");
+	document.write("이름=", name); // 외부파일 변수 사용 가능
+</script>
+</head>
+<body>
+	<img src="../img/wbb2.jpg"/>
+</body>
+</html>

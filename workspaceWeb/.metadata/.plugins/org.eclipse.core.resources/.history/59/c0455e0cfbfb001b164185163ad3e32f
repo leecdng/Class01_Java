@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body{
+		margin:0;
+	}
+	ul, li{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+
+	header{
+		width:800px;
+		height:50px;
+		margin:0 auto;
+		background:yellow;
+		
+	}
+	
+	nav{
+		height:40px;
+		background:green;
+	}
+	
+	nav > ul{
+		width:800px;
+		height:40px;
+		margin:0 auto;
+	}
+	
+	nav li{
+		width:25%;
+		float:left;
+		line-height:40px;
+		text-align:center;
+		color:white;
+	}
+	
+	section{
+		width:800px;
+		margin:0 auto;
+		height:500px;
+		background:#ddd;
+	}
+
+</style>
+</head>
+<body>
+	<header></header>
+	<nav>
+		<ul>
+			<li>메뉴1</li>
+			<li>메뉴2</li>
+			<li>메뉴3</li>
+			<li>메뉴4</li>
+		</ul>
+	</nav>
+	<section></section>
+	<footer>
+	</footer>
+</body>
+</html>
