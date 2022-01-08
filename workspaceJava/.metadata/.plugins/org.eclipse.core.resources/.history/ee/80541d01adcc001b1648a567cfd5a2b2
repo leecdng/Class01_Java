@@ -1,0 +1,22 @@
+
+public class MethodTest {
+	// 멤버영역\
+	int num = 12;
+	String name="홍길동";
+	
+	// 생성자 메소드 : 생략시 자동 추가(JVM)
+	//				상속관계가 아닐 때만 추가해준다.
+	MethodTest(){}	// 필요하든 안 하든 하나 넣어준다 오류 없게 하려고
+	MethodTest(String tel){	// 지역변수
+		System.out.println("연락처:"+tel);
+	}
+	// MethodTest(String name){}
+	// 생성자 메소드를 여러 개 만들 수는 있지만 같은 형식으로 두 개는 안 됨(데이터 타입과 변수 개수가 같으면 안 됨)
+	MethodTest(int num){}
+	MethodTest(int num, String name){}
+	MethodTest(String name, int num){}	// 순서 바뀌면 가능
+	
+	
+}
+
+

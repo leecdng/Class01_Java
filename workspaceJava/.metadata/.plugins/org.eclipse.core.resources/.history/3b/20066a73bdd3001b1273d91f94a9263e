@@ -1,0 +1,14 @@
+package java00_employee;
+
+public class EmpMain {
+
+	public EmpMain() {
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

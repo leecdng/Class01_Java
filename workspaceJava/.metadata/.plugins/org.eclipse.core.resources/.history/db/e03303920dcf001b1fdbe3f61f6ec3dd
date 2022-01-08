@@ -1,0 +1,8 @@
+
+public class ProtectedTest {
+
+	protected ProtectedTest() {
+			System.out.println("같은 패키지의 생성자 메서드");
+	}
+
+}

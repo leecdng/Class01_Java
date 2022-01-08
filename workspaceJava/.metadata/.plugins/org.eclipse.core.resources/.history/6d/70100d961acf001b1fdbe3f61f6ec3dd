@@ -1,0 +1,17 @@
+
+public class InterfaceTestMain {
+	
+	public InterfaceTestMain() {
+		
+	}
+	
+	public void start() {
+	
+	}
+
+	public static void main(String[] args) {
+		new InterfaceTestMain().start();
+
+	}
+
+}

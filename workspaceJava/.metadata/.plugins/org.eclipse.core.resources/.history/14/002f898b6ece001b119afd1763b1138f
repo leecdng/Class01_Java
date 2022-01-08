@@ -1,0 +1,8 @@
+
+public class PrivateChild {
+
+	public PrivateChild() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

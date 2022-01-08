@@ -1,0 +1,25 @@
+
+public class Car {
+	int speed = 0;
+	final int SPEED_MAX = 180;
+	final int SPEED_MIN = 0;
+	String carName = "그랜져";
+	
+	public Car() {
+		
+	}
+	
+	public Car(String carName) {
+		this.carName = carName;
+	}
+	
+	public void speedUp() {
+		speed++;
+		if(speed>=SPEED_MAX) speed = SPEED_MAX; // 최대 속도를 넘지 않는다는 뜻
+	}
+	
+	public void speedDown() {
+		speed--;
+		if(speed<=SPEED_MIN) speed = SPEED_MIN; // 최소 속도(0) 아래로 가지 않음
+	}
+}

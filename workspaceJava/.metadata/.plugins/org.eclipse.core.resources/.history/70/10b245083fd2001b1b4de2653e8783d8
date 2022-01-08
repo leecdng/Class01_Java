@@ -1,0 +1,25 @@
+import java.util.Calendar;
+import java.util.Vector;
+
+public class VectorMain {
+
+	public VectorMain() {
+		// VectorTest 클래스의 start()메서드를 호출하면 Vector 리턴된다.
+		VectorTest vt = new VectorTest();
+		Vector vvv = vt.start();
+		
+		String aaa = (String)vvv.elementAt(0);
+		System.out.println("aaa="+aaa);
+		Calendar ccc = (Calendar)vvv.get(1);
+		System.out.println("ccc="+ccc);
+		int nnn = (int)vvv.get(2);
+		System.out.println("nnn="+nnn);
+		
+	}
+
+	public static void main(String[] args) {
+		new VectorMain();
+
+	}
+
+}

@@ -1,0 +1,15 @@
+
+public class MethodTest2Main {
+
+	public MethodTest2Main() {
+		
+	}
+
+	public static void main(String[] args) {
+		MethodTest2 mt = new MethodTest2();
+		
+		mt.gugudan(8);
+
+	}
+
+}

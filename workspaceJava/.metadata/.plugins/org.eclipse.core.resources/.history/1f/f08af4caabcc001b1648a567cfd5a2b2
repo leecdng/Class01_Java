@@ -1,0 +1,13 @@
+
+public class MethodTest {
+	// 멤버영역\
+	int num = 12;
+	String name="홍길동";
+	
+	// 생성자 메소드 : 생략시 자동 추가(JVM)
+	//				상속관계가 아닐 때만 추가해준다.
+	MethodTest(){}	// 필요하든 안 하든 하나 넣어준다 오류 없게 하려고
+	MethodTest(String tel){	// 지역변수
+		System.out.println("연락처:"+tel);
+	}
+}

@@ -1,0 +1,16 @@
+import test.LottoOOP;
+public class ModifierTest {
+
+	public ModifierTest() {
+		LottoOOP1 lotto = new LottoOOP1();
+	}
+
+	public static void main(String[] args) {
+		// 접근제한자
+		// 클래스 : public, default(접근제한자 생략한 것)
+		// 생성자 메서드, 메서드, 멤버변수 : public, protected, default, private
+		
+		new ModifierTest();
+	}
+
+}

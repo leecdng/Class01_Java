@@ -1,0 +1,22 @@
+import java.util.HashMap;
+
+public class HashMapTest {
+
+	public HashMapTest() {
+		// Map 인터페이스를 상속받은 클래스는 key와 value가 존재한다.
+		// 1. HashMap은 key와 value 데이터를 저장한다.
+		// 2. TreeMap은 key와 value로 데이터르 저장하고, key를 기준으로 정렬된다.
+		
+		HashMap<Integer, String> hm = new HashMap<Integer, String>();
+		hm.put(1, "홍길동"); // 객체 추가
+		
+		
+		
+		HashMap<String, MemberVO> hm2 = new HashMap<String, MemberVO>();
+	}
+
+	public static void main(String[] args) {
+		new HashMapTest();
+	}
+
+}

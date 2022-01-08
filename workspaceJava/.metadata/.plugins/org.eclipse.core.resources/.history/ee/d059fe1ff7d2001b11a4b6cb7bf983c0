@@ -1,0 +1,35 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
+public class HashMapTest {
+
+	public HashMapTest() {
+		// Map 인터페이스를 상속받은 클래스는 key와 value가 존재한다.
+		// 1. HashMap은 key와 value 데이터를 저장한다.
+		// 2. TreeMap은 key와 value로 데이터르 저장하고, key를 기준으로 정렬된다.
+		
+		HashMap<Integer, String> hm = new HashMap<Integer, String>();
+		hm.put(1, "홍길동"); // 객체 추가
+		hm.put(100, "세종대왕");
+		hm.put(50,  "이순신");
+		hm.put(25, "장영실");
+		hm.put(33,  "유승룡");
+		
+		String name = hm.get(100); // int --> Integer
+		System.out.println("100-> "+name);
+		
+		// HashMap에서 Key목록을 구하여 Set에 담아준다.
+		Set<Integer> keyList = hm.keySet();
+		Iterator<Integer> ii = keyList.iterator();
+		System.out.println(valList);
+		
+		HashMap<String, MemberVO> hm2 = new HashMap<String, MemberVO>();
+		
+	}
+
+	public static void main(String[] args) {
+		new HashMapTest();
+	}
+
+}

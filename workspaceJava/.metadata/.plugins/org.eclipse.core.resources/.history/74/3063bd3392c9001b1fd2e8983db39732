@@ -1,0 +1,63 @@
+import java.util.Scanner;
+public class Lotto {
+
+	public static void main(String[] args) {
+		// 로또 번호 생성기
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("게임 수 = ");
+		int game = scan.nextInt();
+		
+		int[] lotto = new int[7];
+		
+		
+		for(int i=1; i<=game; i++) {
+			// 랜덤 숫자 구하기
+			System.out.print(i+"게임 = ");
+			for(int j=0; j<lotto.length; j++) {
+				int random = (int)(Math.random()*45)+1;
+				lotto[j] = random;
+				if(j!=0) {
+					if(random == lotto[j-1]) {
+						j--;
+					}
+				}
+				
+				if(j<lotto.length-1) {
+					System.out.print(lotto[j] + ", ");
+				} else {
+					System.out.print("보너스 "+lotto[6]);
+				}
+			}
+			System.out.println();
+			
+
+		}
+		
+
+	}
+
+}
+/*
+	로또 번호 : 1~45까지 번호 6개
+			 보너스 1개
+			 
+	실행
+	게임수 = 3
+	1게임 = 5,13,26,32,33,45, 보너스 11
+	2게임 = 5,13,26,32,33,45, 보너스 11
+	3게임 = 5,13,26,32,33,45, 보너스 11
+	계속하시겠습니까(1.예, 2.아니오)? 1
+	
+	게임수 = 3
+	1게임 = 5,13,26,32,33,45, 보너스 11
+	2게임 = 5,13,26,32,33,45, 보너스 11
+	3게임 = 5,13,26,32,33,45, 보너스 11
+	4게임 = 5,13,26,32,33,45, 보너스 11
+	5게임 = 5,13,26,32,33,45, 보너스 11
+	계속하시겠습니까(1.예, 2.아니오)? 2
+	
+	주의: 중복되면 안 됨.
+	
+*/

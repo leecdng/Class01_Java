@@ -1,0 +1,22 @@
+import java.util.Calendar;
+
+public class GenericMain {
+
+	public GenericMain() {
+		String data = "서울시 마포구 백범로";
+		
+		GenericTest<String> gt = new GenericTest<String>();
+		gt.setUsername(data);
+		
+		GenericTest<Calendar> gt2 = new GenericTest<Calendar>(data);
+		
+		Calendar now = Calendar.getInstance();
+		
+	}
+
+	public static void main(String[] args) {
+		new GenericMain();
+
+	}
+
+}

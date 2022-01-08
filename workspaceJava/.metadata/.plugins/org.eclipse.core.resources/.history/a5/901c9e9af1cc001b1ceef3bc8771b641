@@ -1,0 +1,54 @@
+import java.util.Scanner;
+import java.util.Calendar;
+public class CalendarOOP {
+	Calendar cal = Calendar.getInstance();
+	
+	int dataYear, dataMonth, week, lastDay;
+	
+	
+	CalendarOOP(){}
+	
+	// 값 입력하기
+	
+	int getConData(String txt) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print(txt + " = ");
+		return scan.nextInt();
+	}
+	
+	void scanData() {
+		dataYear = getConData("연도");
+		dataMonth = getConData("월");
+	}
+	
+	// 캘린더 값 세팅하기
+	void setData() {
+		cal.set(dataYear, dataMonth, 1);
+		week = cal.get(Calendar.WEEK_OF_MONTH);
+	}
+	
+	// 달력의 마지막날 구하기
+	void getLastDay() {
+		lastDay = cal.getActualMaximum(dataMonth);
+	}
+
+	// 달력 출력
+	void setCalendar() {
+		for(int s=1; s<week; s++ ) {
+			System.out.println("\t");
+		}
+		for(int d=1; d<lastDay; d++) {
+			System.out.println(d+"\t");
+			if((d+week-1)%7==0) {
+				System.out.println();
+			}
+		}
+		System.out.println();
+	}
+	
+
+	public static void main(String[] args) {
+		CalendarOOP oop = new CalendarOOP();
+		oop.setCalendar();
+	}
+}

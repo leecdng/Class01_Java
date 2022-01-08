@@ -1,0 +1,14 @@
+
+
+public class ExceptionTest {
+	Scanner scan = new Scanner(System.in);
+
+	public ExceptionTest() {
+		// 두 수를 입력받아 사칙연산하여 출력하라.
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

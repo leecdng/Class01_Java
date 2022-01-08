@@ -1,0 +1,21 @@
+									// 추상클래스 상속
+public class AbstractTestMain extends AbstractTest {
+
+	public AbstractTestMain() {
+		
+	}
+	
+	// 상속받은 추상클래스 내의 모든 추상메소드를 오버라이딩 한다.
+	// 오버라이딩 할 땐 추상메서드 표시 안 함. 실행문 적으면 추상메서드 아님.
+	public void print() {
+		System.out.println("num="+num+", name="+name);
+	}
+
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

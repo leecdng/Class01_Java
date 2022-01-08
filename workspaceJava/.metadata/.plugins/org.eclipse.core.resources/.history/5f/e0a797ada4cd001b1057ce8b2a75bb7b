@@ -1,0 +1,25 @@
+
+public class StringBufferTest {
+
+	public StringBufferTest() {
+		start();
+	}
+	public void start() {
+		StringBuffer sb1 = new StringBuffer();
+		StringBuffer sb2 = new StringBuffer(100);
+		
+		// 확보된 공간 확인하기
+		System.out.println("sb1.capacity="+sb1.capacity()); //16byte
+		System.out.println("sb2.capacity="+sb2.capacity()); // 100byte
+		
+		// append() : 문자열 추가
+		sb1.append("Buffer append Test..");
+	}
+
+	public static void main(String[] args) {
+		new StringBufferTest();
+		
+
+	}
+
+}

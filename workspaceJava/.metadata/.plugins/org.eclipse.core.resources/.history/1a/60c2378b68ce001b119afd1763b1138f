@@ -1,0 +1,15 @@
+
+public class AaaBbbMain {
+
+	public AaaBbbMain() {}
+
+	public static void main(String[] args) {
+		BBB b = new BBB();
+		b.output();
+		// 하위클래스로 객체를 생성하면 상위클래스에 대입된다.
+		AAA a = new BBB();
+		a.output();
+
+	}
+
+}

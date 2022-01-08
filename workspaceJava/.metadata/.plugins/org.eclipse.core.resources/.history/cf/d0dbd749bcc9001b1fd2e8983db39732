@@ -1,0 +1,24 @@
+
+public class ArrayEx04 {
+
+	public static void main(String[] args) {
+		
+		int arr[][] = new int[10][10];
+		
+		int sumR = 0, sumC = 0;
+		for(int r=0; r<arr.length-1; r++) {
+			for(int c=0; c<arr[r].length-1; c++) {
+					arr[r][c]=(r+1)*(c+1);
+					sumR = sumR + arr[r][10];
+					sumC = sumC + arr[10][c];
+			}
+		}
+		
+		for(int[] data : arr) {
+			for(int z: data) {
+				System.out.print(z+"\t");
+			}
+		}
+	}
+
+}

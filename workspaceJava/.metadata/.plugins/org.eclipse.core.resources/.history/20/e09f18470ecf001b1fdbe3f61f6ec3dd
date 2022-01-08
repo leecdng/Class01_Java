@@ -1,0 +1,17 @@
+import test.ProtectedTest2;
+public class ProtectedTestMain {
+
+	public ProtectedTestMain() {
+		// 같은 패키지 내의 다른 클래스는 default처럼 사용 가능
+		ProtectedTest pt = new ProtectedTest();
+		System.out.println("pt.num="+pt.num);
+		pt.print();
+		
+		ProtectedTest pt2 = new ProtectedTest2();
+	}
+	
+	public static void main(String[] args) {
+		new ProtectedTestMain();
+	}
+
+}

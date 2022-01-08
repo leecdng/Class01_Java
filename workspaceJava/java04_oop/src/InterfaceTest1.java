@@ -1,0 +1,12 @@
+
+public interface InterfaceTest1{
+	//인터페이스 : 추상메서드와 static final 변수가 있는 클래스
+	// final 변수
+	public static final int MAX = 100;
+	public static final String LOGO = "비트캠프";
+	
+	// 추상메서드
+	public void output();
+	public int sum();
+
+}

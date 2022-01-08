@@ -1,0 +1,39 @@
+import java.util.Scanner;
+import java.util.Calendar;
+public class CalendarOOP1 {	// 선생님 답
+	Scanner scan = new Scanner(System.in);
+	Calendar date;
+	
+	public CalendarOOP1() {
+		calendarStart();
+	}
+	
+	public void calendarStart() {
+		// 년도, 월
+		int year = getDate("연도");
+		int month = getDate("월");
+		
+		titlePrint(year, month); // 제목 출력할 메소드 호출
+	}
+	// 타이틀 출력
+	public void titlePrint(int year, int month) {
+		System.out.println("\t\t"+year+"년"+month+"월");
+		System.out.println("일\t월\t화\t수\t목\t금\t토");
+	}
+	//콘솔에서 년도, 월을 입력받는 메소드
+	public int getDate(String msg) {
+		System.out.println(msg+"->");
+		return Integer.parseInt(scan.nextLine());
+	}
+	
+
+	public static void main(String[] args) {
+		new CalendarOOP1();
+	}
+
+}
+/*
+ 년월을 입력 받아 달력 출력
+ 멤버에는 Scanner, Calendar 존재한다. 
+ */
+

@@ -1,0 +1,8 @@
+
+public class ProtectedTestMain {
+
+	public ProtectedTestMain() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

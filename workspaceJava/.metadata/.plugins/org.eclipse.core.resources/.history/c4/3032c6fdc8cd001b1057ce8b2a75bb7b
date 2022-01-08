@@ -1,0 +1,49 @@
+
+public class MethodOverloading {
+
+	public MethodOverloading() {
+		
+	}
+
+	// 오버로딩
+	// 같은 클래스에서 메소드명이 같은 메소드가 여러 개 존재할 때 오버로딩이라고 한다.
+	// 메소드명과 반환형은 같고 / 매개변수의 개수나 데이터형은 달라야 한다.
+	
+	int totalResult() {
+		// 1~100까지의 합을 구한다.
+		int result = 0;
+		for(int i=1; i<=100; i++) {
+			result += i;
+		}
+		return result;
+	}
+	// 1~max까지의 합을 구한다.
+	int totalResult(int max) {
+		int result =0;
+		for(int i=1; i<=max; i++) {
+			result += i;
+		}
+		return result;
+	}
+	
+	
+	
+	
+	// 메인 메서드
+	public static void main(String[] args) {
+		MethodOverloading mo = new MethodOverloading();
+		
+		int r = mo.totalResult();	// 1~100까지의 합
+		int rr = mo.totalResult(200);	// 1~200까지의 합
+		System.out.println("r="+r);
+		System.out.println("rr="+rr);
+		
+		// println도 오버로딩되어 있음
+		System.out.println(100);
+		System.out.println(10.36);
+		System.out.println('A');
+		//System.out.println("r="+r); -> 매개변수 -> (String x)
+
+	}
+
+}

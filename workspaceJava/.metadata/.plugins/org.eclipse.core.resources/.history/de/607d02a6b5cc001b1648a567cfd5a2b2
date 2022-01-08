@@ -1,0 +1,36 @@
+
+public class MethodTest2 {
+	boolean power = false; // true:켜짐, false:꺼짐
+	
+	public MethodTest2() {
+		
+	}
+	// 메서드 생성 규칙
+	//반환형 메서드명(매개변수, 매개변수, ...){
+	//	실행문; // 기능구현
+	//}
+	// 메서드명: 소문자로 시작, 합성어의 경우 두 번째 단어부터 대문자로 시작, ()가 있다.
+	
+	// power버튼을 누른 경우
+	void powerStart() {
+		power = !power;	// if문으로 안 써도 표현 가능
+		/*
+		if(power) {	// false면....
+			power = false;
+		} else {
+			power = true;
+		}
+		*/
+		System.out.println("power="+power);
+	}
+	// 단을 입력하면 구구단을 구하여 반환하는 메서드를 생성
+	String gugudan(int dan){
+		// 반환형: 실행문 1개만 내보낸다.
+		String result ="";
+		for(int i=2; i<10; i++) {
+			result += dan+"*"+i+"="+dan*i+"\n";
+		}
+		
+		return result;
+	}
+}

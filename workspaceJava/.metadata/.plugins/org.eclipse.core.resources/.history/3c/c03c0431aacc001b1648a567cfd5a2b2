@@ -1,0 +1,8 @@
+
+public class MathodTest {
+	// 멤버영역\
+	int num = 12;
+	String name="홍길동";
+	
+	// 생성자 메소드
+}

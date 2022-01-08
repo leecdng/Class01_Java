@@ -1,0 +1,9 @@
+package test;
+
+public class ProtectedTest2 {
+
+	protected ProtectedTest2() {
+		System.out.println("다른 패키지의 생성자 메서드");
+	}
+
+}

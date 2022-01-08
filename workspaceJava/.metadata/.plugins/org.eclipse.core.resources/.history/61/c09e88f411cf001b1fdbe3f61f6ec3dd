@@ -1,0 +1,9 @@
+package java04_oop;
+
+public class AbstractTest {
+
+	public AbstractTest() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

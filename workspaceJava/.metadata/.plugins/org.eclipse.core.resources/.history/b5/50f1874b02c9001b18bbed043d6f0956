@@ -1,0 +1,60 @@
+import java.util.Scanner;
+import java.util.Calendar;
+
+class CalendarEx2
+{
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		Calendar cal = Calendar.getInstance();
+
+		System.out.print("연도 = ");
+		int dataYear = scan.nextInt();
+		System.out.print("월 = ");
+		int dataMonth = scan.nextInt();
+
+		
+		//System.out.print(year+"/"+month+"/"+day+"/"+week);
+
+		System.out.printf("\t\t%d년 %d월\n\n", dataYear, dataMonth);
+
+		System.out.println("일\t월\t화\t수\t목\t금\t토");
+
+
+		int dataDay = 1;
+		cal.set(dataYear, dataMonth-1, dataDay);
+		//cal.set(Calendar.DAY_OF_MONTH, dataDay);
+
+		int year = cal.get(Calendar.YEAR);
+		int month = cal.get(Calendar.MONTH)+1;
+		int day = cal.get(Calendar.DAY_OF_MONTH);
+		int week = cal.get(Calendar.DAY_OF_WEEK);
+		int week_n = cal.get(Calendar.WEEK_OF_MONTH);
+
+		int s=1;
+		while(dataDay<=31){
+			if(week!=1){
+				while(s < week){
+					System.out.print("\t");
+					s++;
+				}
+			}
+			if(dataDay==day){
+				System.out.print(dataDay+"\t");
+			}
+			dataDay++;
+			cal.set(Calendar.DAY_OF_MONTH, dataDay);
+			day = cal.get(Calendar.DAY_OF_MONTH);
+			
+		}
+
+
+
+		
+
+
+
+
+		 System.out.println(cal);
+	}
+}

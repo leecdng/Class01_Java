@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class OOP_Ex01 {
+
+	public OOP_Ex01() {
+		
+	}
+
+	
+	// 단 입력받기
+	int danInput() {
+		Scanner scan = new Scanner(System.in);
+	}
+	
+	
+	
+	
+	// 메인 메서드
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+// 콘솔에서 단을 입력받아 입력받은 구구단을 출력하라
+// 1) 단 입력받기 -> 메인메서드에서 단 입력 받을 때만 스캐너 사용하기
+// 2) 구구단 출력

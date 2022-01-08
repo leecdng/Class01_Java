@@ -1,0 +1,13 @@
+
+public class StaticTestMain {
+
+	public StaticTestMain() {
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

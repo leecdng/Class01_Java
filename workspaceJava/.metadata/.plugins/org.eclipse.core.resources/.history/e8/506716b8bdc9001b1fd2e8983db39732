@@ -1,0 +1,30 @@
+
+public class ArrayEx04 {
+
+	public static void main(String[] args) {
+		
+		int arr[][] = new int[10][10];
+		
+		int sumR = 0, sumC = 0;
+		for(int r=0; r<arr.length; r++) {
+			for(int c=0; c<arr[r].length; c++) {
+				if(r!=9 && c!=9) {
+					arr[r][c]=(r+1)*(c+1);
+					sumR = sumR + arr[r][c];
+				} else if(r==9 && c==9){
+					arr[r][c]=0;
+				} else if(r==9 && c!=9 || r!=9 && c==9){
+					arr[r][c]= sumR;
+				}
+			}
+		}
+				
+		for(int[] data : arr) {
+			for(int z: data) {
+				System.out.print(z+"\t");
+			}
+			System.out.println();
+		}
+	}
+
+}

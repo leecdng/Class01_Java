@@ -1,0 +1,13 @@
+
+public class OOP_Ex01 {
+
+	public OOP_Ex01() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

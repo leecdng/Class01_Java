@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class ExceptionTest {
+	Scanner scan = new Scanner(System.in);
+
+	public ExceptionTest() {
+		// 두 수를 입력받아 사칙연산하여 출력하라.
+		System.out.print("첫 번째 수= ");
+		int n1 = scan.nextInt();
+		System.out.print("두 번째 수= ");
+		int n2 = scan.nextInt();
+		
+		int plus = n1 + n2;
+		int minus = n1 - n2;
+		int mul = n1*n2;
+		int devide = n1/n2;
+		
+		System.out.println(n1+"+"+n2+"="+plus);
+		System.out.println(n1+"-"+n2+"="+minus);
+		System.out.println(n1+"*"+n2+"="+mul);
+		System.out.println(n1+"/"+n2+"="+devide);
+	}
+
+	public static void main(String[] args) {
+		ExceptionTest et = new ExceptionTest();
+		
+	}
+
+}

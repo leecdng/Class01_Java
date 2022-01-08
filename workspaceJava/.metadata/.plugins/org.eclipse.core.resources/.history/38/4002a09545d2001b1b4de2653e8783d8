@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class CollectionData {
+
+	public CollectionData() {
+		
+	}
+	public void getMember() {
+		// ArrayList에서 사원정보를 담아서 리턴하는 메서드
+		ArrayList<MemberVO> al = new ArrayList<MemberVO>();	// MemberVO타입만 추가 가능한 메서드, 다른 타입 넣으면 오류
+		List<MemberVO> al2 = new ArrayList<MemberVO>();
+		
+		al2.add(new MemberVO("AAAA","기획부","2021-05-10",5000));
+		
+	}
+
+}

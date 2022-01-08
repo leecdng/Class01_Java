@@ -1,0 +1,37 @@
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeMap;
+
+public class TreeMapTest {
+
+	public TreeMapTest() {
+		// TreeMapÀº key, value¸¦ °¡Áø´Ù.
+		// key¸¦ ±âÁØÀ¸·Î Á¤·ÄÇÑ´Ù.
+		// 
+		
+		TreeMap<String, MemberVO> tm = new TreeMap<String, MemberVO>();
+		
+		tm.put("È«±æµ¿", new MemberVO("È«±æµ¿", "±âÈ¹ºÎ", "2020-10-10", 5000));
+		tm.put("ÀÌ¼ø½Å", new MemberVO("ÀÌ¼ø½Å", "ÃÑ°ýºÎ", "2020-01-01", 6000));
+		tm.put("Àå¿µ½Ç", new MemberVO("Àå¿µ½Ç", "ÃÑ¹«ºÎ", "2020-07-08", 3000));
+		tm.put("¼¼Á¾´ë¿Õ", new MemberVO("¼¼Á¾´ë¿Õ", "ÀÎ»çºÎ", "2020-02-01", 7000));
+		tm.put("À¯½Â·æ", new MemberVO("À¯½Â·æ", "±âÈ¹ºÎ", "2020-03-05", 6000));
+		tm.put("±è»ñ°«", new MemberVO("±è»ñ°«", "¿µ¾÷ºÎ", "2021-02-10", 5000));
+		
+		System.out.println("======== key ÀÌ¿ëÇÏ¿© °´Ã¼ ¾ò¾î¿À±â =========");
+		
+		Set<String> keyList = tm.keySet();
+		Iterator<String> ii = keyList.iterator();
+		while (ii.hasNext()) {
+			MemberVO vo = tm.get(ii.next());
+			System.out.println(vo.toString());
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		new TreeMapTest();
+
+	}
+
+}

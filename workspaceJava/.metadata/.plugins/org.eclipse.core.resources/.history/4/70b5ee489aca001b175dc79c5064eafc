@@ -1,0 +1,88 @@
+import java.util.Scanner;
+public class ArrayScore2 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("학생 수 = ");
+		int cnt = Integer.parseInt(scan.nextLine());
+		
+		// 배열 만들기
+		String nameList[] = new String[];
+		int jumsu[][] = new int[][];		// +2는 과목별 총점, 평균 자리
+		
+		int n = 1;
+		// 값 반복해서 입력받기 + 값을 배열에 저장하기
+		do {			
+			// 값 입력 받고 바로 배열값 넣어주기
+			System.out.print("이름 = ");
+			nameList[cnt-1] = scan.nextLine(); // ----- 왜 이걸 쓰면 다른 정수타입에서 nextLine에 integer.parse 어쩌고 써준 건지
+
+			System.out.print("국어 = ");
+			jumsu[cnt-1][0] = Integer.parseInt(scan.nextLine());
+			System.out.print("영어 = ");
+			jumsu[cnt-1][1] = Integer.parseInt(scan.nextLine());
+			System.out.print("수학 = ");
+			jumsu[cnt-1][2] = Integer.parseInt(scan.nextLine());
+			
+			for(int i=0; i<3; i++) {
+				jumsu[cnt-1][4] += jumsu[cnt-1][i]; // 개인별 총점
+			}
+			
+			jumsu[cnt-1][5] = jumsu[cnt-1][5] / 3;
+			
+			
+			
+			
+			n++;
+		} while(n<=cnt);
+		
+		// 정렬하기
+		
+		
+		
+		// 출력하기
+		
+		System.out.println("====================================================");
+		System.out.println("이름\t국어\t영어\t수학\t총점\t평균\t석차");
+		System.out.println("====================================================");
+		
+		for(int i=0; i<cnt-1; i++) {	// 이름 배열 따로 있으니 열을 바깥 for문으로
+			System.out.print(nameList[i]);
+			for(int j=0; j<jumsu.length; j++) {
+				System.out.print(jumsu[j][i]);
+			}
+			System.out.println();
+		}
+		
+
+	}
+
+}
+
+/*
+	학생 수를 입력 받아 이름과, 세 과목의 점수를 입력 받은 후
+	각 학생의 총점, 평균, 석차, 과목별 총점, 평균을 구하여 석차순으로 출력하라.
+	
+	실행
+	학생수=3
+	이름=홍길동
+	국어=90
+	영어=89
+	수학=90
+	이름=이길동
+	국어=90
+	영어=90
+	수학=43
+	:
+	:
+	===========================
+	이름	국어	영어	수학	총점	평균	석차
+	===========================
+	홍길동 90	89	90	269	___	1
+	이길동 90	90	43	223	___ 2
+	  :	  :	:	:	:	:	:
+	과목별총점__ __ __
+	과목펼평균__ __ __
+
+*/

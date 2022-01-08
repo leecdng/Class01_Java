@@ -1,0 +1,22 @@
+import java.text.DecimalFormat;
+
+public class DecimalDateFormat {
+
+	public DecimalDateFormat() {
+		// 데이터를 원하는 출력형식으로 만들 수 있는 클래스
+		// 숫자를 화폐단위 만들어서 함께 출력
+		int data = 52123124;
+		DecimalFormat format = new DecimalFormat("#,###원");
+		
+		String dataFormat = format.format(data);
+		System.out.println("dataFormat "+dataFormat);
+		
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		new DecimalDateFormat();
+	}
+
+}

@@ -1,0 +1,11 @@
+
+
+public class ClassMain {
+
+	public static void main(String[] args) {	// 메인을 안 만들면 프로그램이 시작이 안 됨
+		// ClassTest에서 구현해 놓은 게 필요해
+		ClassTest ct = new ClassTest();
+		System.out.println("b="+ct.b);
+	}
+
+}

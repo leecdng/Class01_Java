@@ -1,0 +1,8 @@
+
+public class AnonimousInner {
+
+	public AnonimousInner() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

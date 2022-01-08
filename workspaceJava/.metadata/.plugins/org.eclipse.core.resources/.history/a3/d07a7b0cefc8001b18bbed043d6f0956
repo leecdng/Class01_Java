@@ -1,0 +1,16 @@
+
+public class MathRandomTest {
+
+	public static void main(String[] args) {
+		// 난수 : 컴퓨터가 실행되는 시점에 0.0과 1.0 사이 임의의 값이 생성된다.
+		
+		for(int i=1; i<=1000; i++) {
+			double ran = Math.random();
+			System.out.println(ran);
+		}
+		
+
+
+	}
+
+}

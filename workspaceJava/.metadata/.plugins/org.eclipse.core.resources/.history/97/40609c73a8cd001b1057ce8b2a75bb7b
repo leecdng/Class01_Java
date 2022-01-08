@@ -1,0 +1,18 @@
+import java.util.StringTokenizer;
+
+public class StringTokenizerTest {
+
+	public StringTokenizerTest() {
+		String txt = "서울시, 마포구, 신수동, 거구빌딩, 3층, 비트캠프, 교육센터";
+		
+		StringTokenizer st = new StringTokenizer(txt, "구,");
+		int tokenCount = st.countTokens();
+		System.out.println("토큰수->"+tokenCount);
+	}
+
+	public static void main(String[] args) {
+		new StringTokenizerTest();
+
+	}
+
+}

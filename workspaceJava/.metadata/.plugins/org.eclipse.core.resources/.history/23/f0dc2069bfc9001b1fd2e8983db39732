@@ -1,0 +1,27 @@
+
+public class ArrayEx04 {
+
+	public static void main(String[] args) {
+		
+		int arr[][] = new int[10][10];
+		
+		for(int r=0; r<arr.length-1; r++) {
+			int sum =0;
+			for(int c=0; c<arr[r].length; c++) {
+					arr[r][c] = (r+1) * (c+1);
+					arr[r][9] = arr[r][9] + arr[r][c];
+					arr[9][c] = arr[9][c] + arr[r][c];
+			}
+		}
+		
+		arr[9][9] = 0;
+				
+		for(int[] data : arr) {
+			for(int z: data) {
+				System.out.print(z+"\t");
+			}
+			System.out.println();
+		}
+	}
+
+}

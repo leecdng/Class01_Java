@@ -1,0 +1,26 @@
+import java.util.Vector;
+
+public class VectorTest {
+
+	public VectorTest() {
+		
+	}
+	
+	public void start() {
+		// Vector 컬렉션
+		Vector V = new Vector();
+	}
+
+	public static void main(String[] args) {
+		new VectorTest().start();
+
+	}
+
+}
+
+/*
+ 
+ List(interface) : index가 존재한다. 저장순서를 유지한다.
+  
+ 
+ */

@@ -1,0 +1,9 @@
+package test;
+
+public class ProtectedTest2 {
+
+	public ProtectedTest2() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

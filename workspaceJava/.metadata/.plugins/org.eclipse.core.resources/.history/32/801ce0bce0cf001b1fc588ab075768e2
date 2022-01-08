@@ -1,0 +1,17 @@
+
+public class MethodInner {
+	String name ="¼¼Á¾´ë¿Õ";
+	public MethodInner() {
+		System.out.println("MethodInner");
+	}
+	
+	public void start() {
+	
+	}
+	
+	public static void main(String[] args) {
+		MethodInner mi = new MethodInner();
+
+	}
+
+}

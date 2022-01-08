@@ -1,0 +1,16 @@
+import java.util.Vector;
+
+public class VectorMain {
+
+	public VectorMain() {
+		// VectorTest 클래스의 start()메서드를 호출하면 Vector 리턴된다.
+		VectorTest vt = new VectorTest();
+		Vector vvv = vt.start();
+	}
+
+	public static void main(String[] args) {
+		new VectorMain();
+
+	}
+
+}

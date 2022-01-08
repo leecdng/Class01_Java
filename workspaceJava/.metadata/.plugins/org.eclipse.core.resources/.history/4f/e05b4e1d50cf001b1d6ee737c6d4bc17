@@ -1,0 +1,19 @@
+package test;
+
+public class test01 {
+	private final int id;
+	public test01(int id) {
+		this.id = id;
+	}
+	public void test02(int newld) {
+		id = newld;
+	}
+
+	public static void main(String[] args) {
+		test01 dd = new test01(42);
+		dd.test02((69));
+		System.out.println(dd.id);
+
+	}
+
+}

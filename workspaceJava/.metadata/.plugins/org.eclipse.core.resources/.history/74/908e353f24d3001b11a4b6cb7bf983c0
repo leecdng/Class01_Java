@@ -1,0 +1,23 @@
+
+public class GenericTest {
+	
+	private String username;	// private 변수에는 setter getter 메서드 있음???
+	
+	public GenericTest() {
+		
+	}
+	public GenericTest(String username) {
+		this.username=username;
+	}
+	
+	
+	public String getUsername() {
+		return username;
+	}
+	
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	
+	
+}

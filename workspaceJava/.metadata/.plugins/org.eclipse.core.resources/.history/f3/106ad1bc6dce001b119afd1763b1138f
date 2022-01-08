@@ -1,0 +1,9 @@
+
+public class PrivateParent {
+	// private 접근제한자는 다른 클래스에 객체를 통하여 접근할 수 없다.
+	private int num = 200; // 캡슐화
+	public PrivateParent() {
+		
+	}
+
+}

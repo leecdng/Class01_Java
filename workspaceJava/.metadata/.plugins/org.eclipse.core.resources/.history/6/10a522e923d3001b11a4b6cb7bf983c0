@@ -1,0 +1,16 @@
+
+public class GenericMain {
+
+	public GenericMain() {
+		String data = "서울시 마포구 백범로";
+		
+		GenericTest gt = new GenericTest();
+		gt.setUsername(data);
+	}
+
+	public static void main(String[] args) {
+		new GenericMain();
+
+	}
+
+}

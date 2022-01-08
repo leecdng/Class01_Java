@@ -1,0 +1,51 @@
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Scanner;
+
+import EmpInfor.EmpDataSet;
+import EmpInfor.EmpVO;
+
+public class EmpManager {
+	Scanner scan = new Scanner(System.in);
+	public EmpManager() {
+		
+	}
+	
+	public void employeeStart() {
+		boolean logResult = false;
+//		do {
+//			// 로그인
+//			String userid = inData("아이디");
+//			String userpwd = inData("비밀번호");
+//			Login log = new Login();
+//			logResult = log.loginCheck(userid, userpwd);
+//		} while(!logResult);
+	
+		// 로그인 성공하면 오는 곳
+		System.out.println("로그인 성공");
+		
+		// 사원의 기본 정보 생성
+		EmpDataSet.basicEmpSet();	// 패키지가 다르니 import 해오기
+		
+		allEmpList();
+		
+	}
+	
+	// 사원 전체목록 출력하기
+	public void allEmpList() {
+		// 제목 출력
+		EmpVO.titlePrint();
+		Collection<EmpVO> list= EmpDataSet.empList.values();
+		Iterator<EmpVO> ii = list.iterator();
+		while(ii.hasNext()) {
+			EmpVO vo = ii.next();
+			vo.empPrint();
+		}
+	}
+	// 콘솔에서 문자열 입력받는 메서드
+	public String inData(String msg) {
+		System.out.print(msg+"->");		
+		return scan.nextLine();
+	}
+
+}

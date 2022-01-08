@@ -1,0 +1,75 @@
+import java.util.Scanner;
+public class EmailCheckEx_Ans {
+
+	Scanner scan = new Scanner(System.in);
+	
+	String email = "dddd@sss";
+	String id = "";
+	String domain ="";
+	public EmailCheckEx_Ans() {
+		
+		
+	}
+	// 이메일 입력
+	public void getData() {
+		System.out.print("이메일 입력 = ");
+		
+		email = scan.nextLine();
+	}
+	
+	
+	// 거르기
+	
+	
+	
+	
+	// 출력
+	// 아이디
+	public void idPrint(String email) {
+		this.email=email;
+		String[] emailArr = email.split("@");
+		id = emailArr[0];
+		domain = emailArr[1];
+		
+		
+		//return email;
+	}
+	
+	// 도메인
+//	public String domainPrint() {
+//		
+//	}
+	
+	
+	// 최종
+	public void startEmailCheck() {
+		idPrint(email);
+	}
+
+	public static void main(String[] args) {
+		EmailCheckEx_Ans emailChk = new EmailCheckEx_Ans();
+		
+		emailChk.startEmailCheck();
+
+	}
+
+}
+
+/*
+실행
+이메일 입력 = goguma@nate
+이메일을 잘못 입력하였습니다.
+
+이메일 입력 = goguma.com@com
+이메일을 잘못 입력하였습니다.
+
+이메일 입력 = goguma.com
+이메일을 잘못 입력하였습니다.
+
+이메일 입력 = goguma777@nate.com
+아이디 = goguma777
+도메인 = nate.com
+
+이메일 입력 =
+
+*/

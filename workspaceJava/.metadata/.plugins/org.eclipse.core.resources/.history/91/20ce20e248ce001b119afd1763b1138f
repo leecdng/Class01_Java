@@ -1,0 +1,24 @@
+import test.DefaultData;
+import test.LottoOOP1;
+public class ModifierTest {
+
+	public ModifierTest() {
+//		LottoOOP1 lotto = new LottoOOP1();
+//		lotto.lottoStart();
+		
+		DefaultData dd = new DefaultData();
+		// 객체명.멤버변수
+		System.out.println("이름=" + dd.getName());
+		System.out.println("연락처="+ dd.tel); // DefaultData 클래스의 멤버변수에 public 써야 사용 가능
+		
+	}
+
+	public static void main(String[] args) {
+		// 접근제한자
+		// 클래스 : public, default(접근제한자 생략한 것)
+		// 생성자 메서드, 메서드, 멤버변수 : public, protected, default, private
+		
+		new ModifierTest();
+	}
+
+}

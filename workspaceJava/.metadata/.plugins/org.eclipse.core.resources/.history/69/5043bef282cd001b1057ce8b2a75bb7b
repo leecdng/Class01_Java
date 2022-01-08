@@ -1,0 +1,95 @@
+
+public class StringTest {
+
+	public StringTest() {
+		
+	}
+
+	public void start() {
+		//
+		String str1 = "서울시 마포구 신수동";
+		String str2 = "서울시 마포구 신수동";
+		String str3 = new String("서울시 마포구 신수동");
+		String data = str3;
+		
+		byte[] byteData = {65,66,67,68}; // 아스키코드값 -> ABCD
+		String str4 = new String(byteData); //"ABCD"
+		
+		char[] charData = {'X','Y','Z'}; // "XYZ"
+		String str5 = new String(charData);
+		
+		int[] intData = {65,66,67,68,69,70};
+		String str6 = new String(intData, 2, 3); // index 2번째부터 3개를 문자로 생성해라.
+		
+		System.out.println("byteData="+str4);
+		System.out.println("charData="+str5);
+		System.out.println("intData="+str6);
+		
+		if(str1 == str2) {
+			System.out.println("같다");
+		}else{
+			System.out.println("다르다");
+		}
+		
+		if(str1 == str3) {
+			System.out.println("같다");
+		}else{
+			System.out.println("다르다");
+		}
+		
+		if(str1.equals(str3)) {	// 객체와 객체가 같은지를 구한다.
+			System.out.println("같다");
+		}else{
+			System.out.println("다르다");
+		}
+		
+		if(str3==data) {
+			System.out.println("같다.");
+		}else {
+			System.out.println("다르다.");
+		}
+		
+		str3 = "서울시 종로구";
+		System.out.println(str3);
+		System.out.println(data);
+		
+		char c = str1.charAt(2); // index 위치의 문자 1개를 얻어온다.
+		System.out.println("str1.charAt(2)->"+c);
+		
+		String result = str1 + str2;
+		String result2 = str1.concat(str2);
+		System.out.println("result="+result);
+		System.out.println("result2="+result2);
+		
+		String data2="Java String Test";
+		String data3="java string test";
+		if(data2.equals(data3)) {
+			System.out.println("같다");
+		}else {
+			System.out.println("다르다");
+		}
+		
+		if(data2.equalsIgnoreCase(data3)) {	// 대소문자 구별없이 같은지 비교
+			System.out.println("같다");
+		}else {
+			System.out.println("다르다");
+		}
+		
+		byte[] byteCode = data2.getBytes(); // 문자열을 byte 배열로 구한다
+		for( byte b : byteCode ) {
+			System.out.print((char)b+"-->"+b+",");
+		}
+		System.out.println(idx);
+		
+		int idx = data2.indexOf("t");// 특정문자의 index 위치를 구한다
+		System.out.println(idx);
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		new StringTest().start();	/////
+
+	}
+
+}

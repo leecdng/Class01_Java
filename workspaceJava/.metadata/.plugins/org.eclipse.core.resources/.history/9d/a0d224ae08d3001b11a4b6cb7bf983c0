@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ObjectCompareTest {
+
+	public ObjectCompareTest() {
+		
+		List<MemberVO> mem = new ArrayList<MemberVO>();
+
+		mem.add(new MemberVO("È«±æµ¿", "±âÈ¹ºÎ", "2020-10-10", 5000));
+		mem.add(new MemberVO("ÀÌ¼ø½Å", "ÃÑ°ýºÎ", "2020-01-01", 6000));
+		mem.add(new MemberVO("Àå¿µ½Ç", "ÃÑ¹«ºÎ", "2020-07-08", 3000));
+		mem.add(new MemberVO("¼¼Á¾´ë¿Õ", "ÀÎ»çºÎ", "2020-02-01", 7000));
+		mem.add(new MemberVO("À¯½Â·æ", "±âÈ¹ºÎ", "2020-03-05", 6000));
+		mem.add(new MemberVO("±è»ñ°«", "¿µ¾÷ºÎ", "2021-02-10", 5000));
+		
+		System.out.println("======== Á¤·Ä Àü µ¥ÀÌÅÍ ========");
+		
+		for(MemberVO v: mem) {
+			System.out.println(v.toString());
+		}
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

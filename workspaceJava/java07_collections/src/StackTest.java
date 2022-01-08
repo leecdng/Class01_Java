@@ -1,0 +1,31 @@
+import java.util.Stack;
+
+public class StackTest {
+
+	public StackTest() {
+		// Stack은 먼저 입력된 정보가 나중에 출력된다. (FILO: first in last out 선입후출)
+		// Queue: (FIFO 선입선출)
+		// push: 입력, pop:출력
+		
+		Stack<String> stack = new Stack<String>();
+		
+		stack.push("홍길동");
+		stack.push("세종대왕");
+		stack.push("이순신");
+		stack.push("김정희");
+		
+		// empty() : stack에 객체가 있으면 false, 객체가 없을 때 true
+		while(!stack.empty()) {
+			String name = stack.pop();	// 마지막에 입력한 김정희가 제일 먼저 나옴
+			System.out.println(name);
+		}
+		
+		
+	}
+
+	public static void main(String[] args) {
+		new StackTest();
+
+	}
+
+}

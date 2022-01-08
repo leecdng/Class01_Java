@@ -1,0 +1,19 @@
+import java.util.Random;
+public class RandomTest {
+	
+	public static void main(String[] args) {
+		// Random : 난수 생성클래스
+		Random ran = new Random();
+		
+		for(int i=1; i<=1000; i++) {
+			
+			//정수(int)를 구한다.
+			int random = ran.nextInt(6); // -21억 ~ 21억 정도
+			System.out.print(random+" ");
+			if(i%10==0) {
+				System.out.println();
+			}
+		}
+	}
+
+}

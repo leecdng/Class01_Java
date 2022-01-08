@@ -1,0 +1,10 @@
+
+public class ForExtesionArray {
+
+	public static void main(String[] args) {
+		 // 확장된 for문
+		int arr[] = {85,6,92,65,12,74,35};
+
+	}
+
+}

@@ -1,0 +1,22 @@
+import java.util.TreeSet;
+
+public class TreeSetTest {
+	String list[] = {"JAVA", "Spring", "스프링프레임", "JAVA", "자바", "ORACLE", "스프링", "ORACLE"};
+	
+	public TreeSetTest() {
+		start();
+	}
+	public void start() {
+		// TreeSet : 입력 순서를 유지하지 않는다. 중복데이터 허용하지 않음. 자동으로 정렬한다.
+		TreeSet<String> ts= new TreeSet<String>();
+		// TreeSet에 객체 추가
+		for( String data : list) {
+			ts.add(data);
+		}
+	}
+
+	public static void main(String[] args) {
+		new TreeSetTest();
+	}
+
+}

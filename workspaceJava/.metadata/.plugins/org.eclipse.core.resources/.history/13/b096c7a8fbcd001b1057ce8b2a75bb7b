@@ -1,0 +1,58 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class LottoOOP {
+	int cnt = inputCount();
+	int[] lotto = new int[7];
+	
+	public LottoOOP() {
+		
+	}
+	
+	
+	// 게임수 입력받기
+	public int inputCount() {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("게임 수 = ");
+		return scan.nextInt();
+	}
+	
+	// 로또 번호 랜덤 생성
+	public int[] lottoNum() {
+		for(int i=0; i<lotto.length; i++) {
+			lotto[i] = (Math.random()*45)+1;
+		}
+		return lotto;
+	}
+	
+	// 로또 번호 정렬 // Arrays 쓰기
+	public void lottoArr() {
+		
+	}
+	
+	
+	// 게임수만큼 반복해서 출력
+	public void lottoPrint(int cnt) {
+		this.cnt = cnt;
+		cnt = inputCount();
+		
+	}
+	
+	
+	
+	// 계속하겠습니까? 1.예, 2.아니오 선택 -> 1이면 계속, 2면 종료
+	public void start() {
+		do {
+			
+			
+		} while(true);
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		LottoOOP oop = new LottoOOP().start();
+
+	}
+
+}

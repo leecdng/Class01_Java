@@ -1,0 +1,8 @@
+
+public class PrivateParent {
+	private int num = 200;
+	public PrivateParent() {
+		
+	}
+
+}

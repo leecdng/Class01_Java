@@ -1,0 +1,81 @@
+import java.util.Scanner;
+public class Lotto {
+
+	public static void main(String[] args) {
+		// 로또 번호 생성기
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int data = 1;
+		
+		do {
+			System.out.print("게임 수 = ");	// 게임 수 입력
+			int game = scan.nextInt();
+			
+			int[] lotto = new int[7];	// 로또 배열
+			
+			for(int i=1; i<=game; i++) {	// 입력한 게임 수만큼 반복
+				
+				System.out.print(i+"게임 = ");
+				
+				// 랜덤 숫자 구하기
+				for(int j=0; j<lotto.length; j++) { //lotto[0]~lotto[lotto.length-1] 까지 반복
+					int random = (int)(Math.random()*45)+1;	// 1~45까지 숫자 중 난수 구하기
+					lotto[j] = random;	// 배열에 난수 하나씩 넣어주기
+					if(j!=0) {	// lotto[0] 때를 제외하고 실행
+						if(random == lotto[j-1]) {	//lotto[j]로 정해진 값이 이전 배열값이랑 같으면
+							j--;	// 다음 배열값으로 넘어가지 못 하게 하고 다시 난수 구하기
+						}
+					} //if
+				} //for
+				
+				//정렬
+				// lotto.length-1 => 보너스 제외한 정렬
+				for(int m=0; m<lotto.length-1-1; m++) {
+					for(int n=0; n<lotto.length-1-m-1; n++) {
+						if(lotto[n]>lotto[n+1]) {	// 비교해서
+							int temp = lotto[n];	// 교환하기
+							lotto[n] = lotto[n+1];
+							lotto[n+1] = temp;
+						} //if
+					} // for
+				} //for
+				
+				// 출력
+				for(int j=0; j<lotto.length; j++) {
+					if(j<lotto.length-1) {
+						System.out.print(lotto[j] + ", ");
+					} else {
+						System.out.print("보너스 "+lotto[6]);
+					} //if
+				} //for
+				System.out.println();
+			} //for
+			System.out.print("계속하시겠습니까(1.예, 2.아니오)? ");
+			data = scan.nextInt();
+			
+		} while(data==1);	//do-while
+	} //main
+} //class
+/*
+	로또 번호 : 1~45까지 번호 6개
+			 보너스 1개
+			 
+	실행
+	게임수 = 3
+	1게임 = 5,13,26,32,33,45, 보너스 11
+	2게임 = 5,13,26,32,33,45, 보너스 11
+	3게임 = 5,13,26,32,33,45, 보너스 11
+	계속하시겠습니까(1.예, 2.아니오)? 1
+	
+	게임수 = 3
+	1게임 = 5,13,26,32,33,45, 보너스 11
+	2게임 = 5,13,26,32,33,45, 보너스 11
+	3게임 = 5,13,26,32,33,45, 보너스 11
+	4게임 = 5,13,26,32,33,45, 보너스 11
+	5게임 = 5,13,26,32,33,45, 보너스 11
+	계속하시겠습니까(1.예, 2.아니오)? 2
+	
+	주의: 중복되면 안 됨.
+	
+*/

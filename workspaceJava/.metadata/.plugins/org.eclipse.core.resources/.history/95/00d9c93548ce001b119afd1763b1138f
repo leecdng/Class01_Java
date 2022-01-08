@@ -1,0 +1,9 @@
+package test;
+
+public class DefaultData {
+
+	public DefaultData() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

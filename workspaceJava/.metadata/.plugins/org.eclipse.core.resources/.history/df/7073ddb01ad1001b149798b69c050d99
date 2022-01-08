@@ -1,0 +1,123 @@
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class 김기솔PrintGradeException {
+    Scanner scan = new Scanner(System.in);
+    int stdNum;
+
+    String arraySubject[] = {"국어", "수학", "영어"};
+    String arrayName[][] = new String[][]; //멤버변수 입력받는 방법을 모르겠어요 ㅠㅠ
+    int arrayScore[][] = new int[][];
+
+    public 김기솔PrintGradeException(){
+        inputStdNum();
+        inputScore();
+        sortArray();
+        getRank();
+        printArray();
+    }
+    //학생수 입력받기
+    public int inputStdNum(){
+        while(true) {
+            try {
+                System.out.print("학생수=");
+                stdNum = Integer.parseInt(scan.nextLine());
+                if(stdNum <= 0) throw new PositiveIntegerException();
+                else return stdNum;
+            }catch (PositiveIntegerException pie){
+                System.out.println("1 이상의 숫자를 입력해주세요.");
+            }catch (InputMismatchException ime){
+                System.out.println("1 이상의 숫자를 입력해주세요.");
+            }catch (NumberFormatException nfe){
+                System.out.println("1 이상의 숫자를 입력해주세요.");
+            }
+        }
+    }
+    //이름과 성적 입력받기 + 개인별 총점/평균 + 과목별 총점/평균
+    public void inputScore(){
+        arrayName[stdNum][0] = "과목별 총점";
+        arrayName[stdNum + 1][0] = "과목별 평균";
+        for(int row = 0; row < stdNum; row++){
+            System.out.print("이름=");
+            arrayName[row][0] = scan.nextLine() + "\t";
+            for(int col = 0; col < 3; col++){
+                while (true){
+                    try {
+                        System.out.print(arraySubject[col] + "=");
+                        arrayScore[row][col] = Integer.parseInt(scan.nextLine());
+                        if(arrayScore[row][col] < 0 || arrayScore[row][col] > 100) throw new PositiveIntegerException(); // 1~100사이 입력
+                        arrayScore[row][3] += arrayScore[row][col]; //개인별 총점 더하기
+                        arrayScore[stdNum][col] += arrayScore[row][col]; //과목별 총점 더하기
+                        break;
+                    }catch (PositiveIntegerException pie){
+                        System.out.println(pie.getMessage());
+                    }catch (InputMismatchException ime){
+                        System.out.println("0~100 사이의 숫자를 입력해주세요.");
+                    }catch (NumberFormatException nfe){
+                        System.out.println("0~100 사이의 숫자를 입력해주세요.");
+                    }
+                }
+            }
+            arrayScore[row][4] = arrayScore[row][3] / 3; //개인별 평균 구하기
+            for(int col = 0; col < 3; col++){ //과목별 평균 구하기
+                arrayScore[stdNum + 1][col] = arrayScore[stdNum][col] / stdNum;
+            }
+        }
+    }
+    //오름차순 정렬하기
+    public void sortArray(){
+        int offset, compare, maxRow;
+        for (offset = 0; offset < stdNum - 1; offset++) {
+            maxRow = offset;
+            for (compare = offset; compare < stdNum; compare++) {
+                if (arrayScore[compare][3] > arrayScore[maxRow][3]) {
+                    maxRow = compare;
+                }
+            }
+            //점수 배열 정렬
+            int[] temp = arrayScore[maxRow];
+            arrayScore[maxRow] = arrayScore[offset];
+            arrayScore[offset] = temp;
+            //이름 배열 정렬
+            String[] temp2 = arrayName[maxRow];
+            arrayName[maxRow] = arrayName[offset];
+            arrayName[offset] = temp2;
+        }
+    }
+    //석차 구하기(동점일 경우 석차 낮춰서 계산)
+    public void getRank(){
+        arrayScore[0][5] = 1;
+        for (int row = 1; row < stdNum; row++) {
+            arrayScore[row][5] = arrayScore[row - 1][5] + 1;
+            for (int row2 = row - 1; row2 >= 0; row2--) {
+                if (arrayScore[row2][3] == arrayScore[row][3]) {
+                    arrayScore[row2][5] = arrayScore[row][5];
+                }
+            }
+        }
+    }
+    //출력하기
+    public void printArray(){
+        System.out.println("===================================================================");
+        System.out.println("이름\t\t\t국어\t수학\t영어\t총점\t평균\t석차");
+        System.out.println("===================================================================");
+        for (int row = 0; row < stdNum + 2; row++){
+            System.out.print(arrayName[row][0] + "\t");
+            for (int col = 0; col < 6; col++){
+                System.out.print(arrayScore[row][col] + "\t");
+            }
+            System.out.println("");
+        }
+    }
+    //메인메소드
+    public static void main(String[] args) {
+        김기솔PrintGradeException pge = new 김기솔PrintGradeException();
+    }
+}
+//1~100사이 예외 클래스
+class PositiveIntegerException extends Exception{
+    public PositiveIntegerException(){
+        super("0~100 사이의 숫자를 입력해주세요.");
+    }
+}
