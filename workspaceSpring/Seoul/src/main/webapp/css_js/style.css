@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+
+
+body, div, h1, h2, h3, img, a, span, input, form, ul, li{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+ul, li{
+	list-style:none;
+}
+
+a, a:hover{
+	text-decoration:none;
+	color:#333;
+}
+
+
+.ir-text{
+	text-indent: 100%;    
+    white-space: nowrap;
+	overflow:hidden;
+}
+
+
+
+#wrap{
+	width:800px;
+	margin:0 auto;
+}
+
+
+#header{
+	
+}
+
+.top > ul {
+	display:flex;
+	justify-content: flex-end;
+}
+
+.top > ul  li{
+	height:24px;
+	margin-left:20px;
+}
+
+
+#frmLogin{
+	display:inline-flex;
+	justify-content:space-around;
+	align-items:center;
+}
+
+#frmLogin > input {
+	margin-left:5px;
+	height:24px;
+}
+
+#frmLogin > input:not([type="submit"]) {
+	width:140px;
+}
+
+#frmLogin > #btnLogin {
+	width:80px;
+}
+
+.logo{
+	height:100px;
+	padding-top:30px;
+}
+
+.logo > a{
+	display:block;
+	width:274px;
+	height:35px;
+	margin:0 auto;
+	background: url(../img/seoul.png) no-repeat center center;
+}
+
+
+#nav{
+	height:50px;
+}
+
+
+#nav > .gnb {
+	display: flex;
+	justify-content: space-around;
+	line-height:50px;
+}
+
+#nav > .gnb > li{
+	position:relative;
+	z-index:100;
+	width:20%;
+	background-color:#456;
+	text-align:center;
+}
+
+#nav > .gnb > li > a {
+	color:#fff;
+}
+
+.menu-sub {
+	position:absolute;
+	top:50px; left:0;
+	display: none;
+	width:100%;
+	background-color:#456;
+	z-index:99;
+}
+
+
+#nav li > a:hover {
+	color:#f00;
+}
+
+
+
+
+
+#slider > li > img{
+	width:100%;
+}
+
+
+
+
+h1.content-title{
+	text-align:center;
+	font-size:26px;
+	color:#999;
+}
+
+
+.board-wrap{
+	margin-top:20px;
+}
+
+.board-free{
+	overflow:auto;
+	margin-top:10px;
+}
+
+.board-free::after{
+	clear:both;
+}
+
+.board-free > li{
+	width:10%;
+	float:left;
+	text-align: center;
+	border-bottom:1px solid #ddd;
+}
+
+
+.board-free > li:nth-child(5n+1){
+	text-align: left;
+}
+
+.board-free > li:nth-child(5n+1) > input{
+	margin:0 10px 0 5px;
+}
+
+.board-free > li:nth-child(5n+2){
+	width:60%;
+	text-align: left;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+
+.board-free > li:nth-child(5n){
+	/*width:10%;*/
+}
+
+.board-free > li:nth-child(5n)::after {
+	clear:both;
+}
+
+
+.board-free > li.board-col {
+	text-align: center;
+	font-weight:bold;
+	border-top:1px solid #ddd;
+}
+
+
+
+.pagination {
+	justify-content: center;
+	margin:25px 0 45px;
+}
+
+
+
+
+
+#footer{
+	height:50px;
+	background: #456;
+	color:#fff;
+	text-align:center;
+	line-height:50px;
+}

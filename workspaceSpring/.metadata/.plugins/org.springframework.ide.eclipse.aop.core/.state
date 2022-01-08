@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="webSpring02_jdbcTemplate"/>
+<aop-project name="Seoul"/>
+<aop-project name="webSpring01"/>
+<aop-project name="webSpring04_mybatis"/>
+<aop-project name="webSpringOracleMybatisXml"/>
+<aop-project name="webSpringOracleMyBatisNoXml"/>
+<aop-project name="webSpring03_fileupload"/>
+<aop-project name="webSpringAjax"/>
+</aop-reference-model>

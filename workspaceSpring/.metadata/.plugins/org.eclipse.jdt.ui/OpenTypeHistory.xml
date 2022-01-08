@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=Seoul/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.seoul.myapp{DBConnection.java[DBConnection" modifiers="1" timestamp="1632633874190"/>
+    <typeInfo handle="=webSpring02_jdbcTemplate/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.bitcamp.app.board{BoardDAOImp.java[BoardDAOImp" modifiers="513" timestamp="1632798440814"/>
+    <typeInfo handle="=webSpringOracleMybatisXml/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.bitcamp.myapp.service{BoardService.java[BoardService" modifiers="513" timestamp="1633570756802"/>
+</typeInfoHistroy>
